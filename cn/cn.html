@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+  <!--    font awesome    -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="/cn/cn.css">
+</head>
+
+<body>
+  
+  <div class="sems">
+
+
+
+    <button onclick="forthird()" href="">sem3</button>
+
+    <button onclick="forfourth()" href="">sem4</button>
+
+    <button class="active" onclick="forfifth()" href="">sem5</button>
+
+    <button onclick="forsixth()" href="">sem6</button>
+
+    <button onclick="forseventh()" href="">sem7</button>
+
+
+
+  </div>
+
+  <!--      subjects  -->
+ 
+  <div class="sub">
+    <div class="subactiv">
+      <a >
+        CN
+      </a>
+    </div>
+    <div>
+      <a href="/index.html">
+        DBMS
+      </a>
+    </div>
+
+  </div>
+  
+  <!--    cards    -->
+  <div class="cards">
+    <div class="card card1">
+      <div class="container">
+        <textarea name="" id="myInput" >
+ set ns [new Simulator] 
+
+set nf [open lab1.nam w] 
+$ns namtrace-all $nf
+
+set tf [open lab1.tr w] 
+$ns trace-all $tf
+
+proc finish { } { 
+global ns nf tf
+$ns flush-trace
+close $nf
+close $tf
+exec nam lab1.nam &
+exit 0
+}
+
+set n0 [$ns node] 
+set n1 [$ns node]
+set n2 [$ns node]
+set n3 [$ns node]
+
+$ns duplex-link $n0 $n2 200Mb 10ms DropTail 
+$ns duplex-link $n1 $n2 100Mb 5ms DropTail 
+$ns duplex-link $n2 $n3 1Mb 1000ms DropTail
+$ns queue-limit $n0 $n2 10
+$ns queue-limit $n1 $n2 10
+
+set udp0 [new Agent/UDP] 
+$ns attach-agent $n0 $udp0
+set cbr0 [new Application/Traffic/CBR] 
+$cbr0 set packetSize_ 500 
+$cbr0 set interval_ 0.005
+$cbr0 attach-agent $udp0
+
+set udp1 [new Agent/UDP]
+$ns attach-agent $n1 $udp1
+set cbr1 [new Application/Traffic/CBR]
+$cbr1 attach-agent $udp1
+
+set udp2 [new Agent/UDP]
+$ns attach-agent $n2 $udp2
+set cbr2 [new Application/Traffic/CBR]
+$cbr2 attach-agent $udp2
+set null0 [new Agent/Null] 
+$ns attach-agent $n3 $null0
+$ns connect $udp0 $null0
+$ns connect $udp1 $null0
+
+$ns at 0.1 "$cbr0 start"
+$ns at 0.2 "$cbr1 start"
+$ns at 1.0 "finish"
+
+$ns run         
+                    
+    
+  
+                  </textarea>
+      </div>
+      <div class="details">
+
+        <button class="texts-btn" id="copied" onclick="myFunction1()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
+        <h3>PROGRAM 1</h3>
+        <p></p>
+      </div>
+    </div>
+    <div class="card card2">
+      <div class="container">
+        <textarea name="" id="myInput" cols="90" rows="10">
+                      
+  programs 
+                  </textarea>
+
+      </div>
+      <div class="details">
+
+        <button class="texts-btn" id="copied" onclick="myFunction1()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
+        <h3>PROGRAM 2</h3>
+        <p></p>
+      </div>
+    </div>
+    <div class="card card3">
+      <div class="container">
+        <textarea name="" id="myInput" cols="90" rows="10">
+                                  programs
+                                  </textarea>
+      </div>
+      <div class="details">
+
+        <button class="texts-btn" id="copied" onclick="myFunction1()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
+        <h3>PROGRAM 3</h3>
+        <p></p>
+      </div>
+    </div>
+           
+        <!--  program 4      
+        <div class="card card1">
+            <div class="container">
+                <textarea  name="" id="myInput" cols="90" rows="10">
+                  programs
+                  </textarea>
+            </div>
+            <div class="details">
+              
+<button class="texts-btn"  id="copied"
+onclick="myFunction1()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button> 
+                <h3>PROGRAM 1</h3>
+                <p></p>
+            </div>
+        </div>
+        
+          <!--    program5    
+        <div class="card card2">
+            <div class="container">
+              <textarea  name="" id="myInput" cols="90" rows="10">
+                  programs
+                  </textarea>
+               
+            </div>
+            <div class="details">
+              
+<button class="texts-btn"  id="copied"
+onclick="myFunction1()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
+                <h3>PROGRAM 2</h3>
+                <p></p>
+            </div>
+        </div>
+          <!--   program 6     
+        <div class="card card3">
+            <div class="container">
+                <textarea name="" id="myInput" cols="90" rows="10">
+                                  programs
+                                  </textarea>
+            </div>
+            <div class="details">
+              
+<button class="texts-btn"  id="copied"
+onclick="myFunction1()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
+                <h3>PROGRAM 3</h3>
+                <p></p>
+            </div>
+  </div>      -->
+
+  <div class="upload"> 
+     <button onclick="upload()">
+      <i class="fa fa-upload"></i>
+    </button>
+   </div>
+
+  <div id="confirm" class="outline">
+    <p>Would you like to upload Programs?
+    </p>
+    <div class="buttons">
+    <a href="#">
+      <button onclick="ifno()" class="no">no</button>
+    </a>
+    <a href="https://uploadprogram.netlify.app/">
+      <button  class="yes">yes</button>
+    </a>
+    </div>
+  </div>
+
+  <!-- Project -->
+  <script src="cn.js"></script>
+</body>
+</html>
