@@ -19,7 +19,7 @@ body{
   flex:wrap;
   justify-content:center;
 }
-.sems button {
+.sems a{
   border: none;
   background: none;
   height: 40px;
