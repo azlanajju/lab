@@ -160,7 +160,7 @@ textarea{
     line-height: 30px;
     font-weight: 400;
 }
-.upload button i{
+.upload a i{
   font-size: 30px;
   color: white;
   background: #6DE60D;
@@ -230,3 +230,35 @@ textarea{
   background: #58CA1DAD;
 }
 
+
+/* footer section styling */
+footer{
+  width: 100%;
+    background: #16161AA6;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+footer span a{
+    color: greenyellow;
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: none;
+}
+.linkicon a{
+  text-decoration: none;
+}
+.linkicon a i{
+  color:white;
+  margin: 10px;
+  font-size: 20px;
+  
+}
+
+
+.linkicon a i:hover{
+  color:#763C32;
+  margin: 10px;
+  font-size: 20px;
+}
