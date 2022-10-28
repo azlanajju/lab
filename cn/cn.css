@@ -83,7 +83,7 @@ font-weight: bolder;
     height: 60vh;
 }
 textarea{
-  
+  color:white;
   overflow-y: scroll;
   font-weight: bold;
   padding: 15px;
@@ -122,26 +122,26 @@ textarea{
 } */
 .card1>.container textarea{
     background-image: linear-gradient(
-        135deg,
-        white,
-       #6DE60D63
+           165deg,
+        #1c1b29,
+       black, black
        
     );
     
 }
 .card2>.container textarea{
     background-image: linear-gradient(
-        135deg,
-        white,
-        #42ffdb
+       165deg,
+        #1c1b29,
+       black, black
     );
       
 }
 .card3>.container textarea{
     background-image: linear-gradient(
-        135deg,
-        white,
-        #f8501c
+           165deg,
+        #1c1b29,
+       black, black
     );
 }
 .details{
@@ -172,6 +172,11 @@ textarea{
   z-index: 1;
   
 }
+
+::selection {
+  color: white;
+  background:  #6DE60D;
+} 
 @media only screen and (min-width: 980px) {
 
 
