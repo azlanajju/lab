@@ -252,7 +252,7 @@ $ns run
     <div class="card card3">
       <div class="container">
         <textarea name="" id="myInput2" cols="90" rows="10">
-                                set ns [new Simulator]
+                              set ns [new Simulator]
 set tf [open lab3.tr w]
 $ns trace-all $tf
 set nf [open lab3.nam w]
@@ -272,7 +272,7 @@ set n5 [$ns node]
 $n5 color "blue"
 $n5 label "dest1"
 $ns make-lan "$n0 $n1 $n2 $n3 $n4" 100Mb 100ms LL Queue/DropTail Mac/802_3
-/* should come in single line */
+
 $ns duplex-link $n4 $n5 1Mb 1ms DropTail
 set tcp0 [new Agent/TCP]
 $ns attach-agent $n0 $tcp0
@@ -295,8 +295,9 @@ $ns connect $tcp2 $sink3
 set file1 [open file1.tr w]
 $tcp0 attach $file1
 set file2 [open file2.tr w]
-$tcp2 attach $file2$tcp0 trace cwnd_ /* must put underscore ( _ ) after cwnd and no space between
-them*/
+$tcp2 attach $file2
+$tcp0 trace cwnd_ 
+
 $tcp2 trace cwnd_
 proc finish { } {
 global ns nf tf
@@ -318,6 +319,7 @@ $ns at 16 "finish"
 $ns run
           
           
+  
           <!-- awk program-->
           BEGIN {
 }
