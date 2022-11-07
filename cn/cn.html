@@ -316,6 +316,17 @@ $ns at 10 "$ftp2 start"
 $ns at 15 "$ftp2 stop"
 $ns at 16 "finish"
 $ns run
+          
+          
+          <!-- awk program-->
+          BEGIN {
+}
+{
+if($6= ="cwnd_") /* don’t leave space after writing cwnd_ */
+printf("%f\t%f\t\n",$1,$7); /* you must put \n in printf */
+}
+END {
+}
                                   </textarea>
       </div>
       <div class="details">
