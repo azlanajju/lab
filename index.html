@@ -158,7 +158,40 @@ INSERT INTO BOOK_LENDING VALUES(333,22,1, '2017-07-10', '2017-07-15');
     <div class="card card3">
       <div class="container">
         <textarea name="" id="myInput2" cols="90" rows="10">
-                                  program
+                                CREATE TABLE ACTOR (ACT_ID INT(5) PRIMARY KEY, ACT_NAME VARCHAR(15) NOT NULL, ACT_GENDER VARCHAR(2) not null);
+CREATE TABLE DIRECTOR (DIR_ID int PRIMARY KEY, DIR_NAME varchar(18) NOT NULL, DIR_PHONE VARCHAR(10) NOT NULL);
+create table MOVIES (MOV_ID INT primary key, MOV_TITLE VARCHAR(10) NOT null, MOV_YEAR INT NOT NULL ,MOV_LANG varchar(10) NOT NULL ,DIR_ID INT NOT NULL, FOREIGN KEY(DIR_ID) REFERENCES DIRECTOR(DIR_ID) ON DELETE CASCADE);
+create table MOVIE_CAST( ACT_ID INT NOT NULL, MOV_ID INT NOT NULL, ROLE VARCHAR (10) NOT NULL, primary key(ACT_ID,MOV_ID),foreign key(ACT_ID) references ACTOR (ACT_ID) ON delete cascade, foreign key(MOV_ID) references MOVIES(MOV_ID) ON delete cascade);
+CREATE TABLE RATING( MOV_ID INT NOT NULL,REV_STARS INT NOT NULL,primary key(MOV_ID), foreign key(MOV_ID) references MOVIES (MOV_ID) ON delete cascade);
+INSERT into ACTOR values(111,'DEEPA SANNIDHI','F');
+INSERT into ACTOR values(222,'SUDEEP','M');
+INSERT into ACTOR values(333,'PUNETH','M');
+INSERT into ACTOR values(444,'DIGHANTH','M');
+INSERT into ACTOR values(555,'ANGELA','F');
+insert into DIRECTOR values(101,'HITCHCOOK','112267809');
+insert into DIRECTOR values(102,'RAJMAOLI','152358709');
+insert into DIRECTOR values(103,'YOGA RAJ','272337808');
+insert into DIRECTOR values(104,'STEVEN SPIELBERG','363445678');
+insert into DIRECTOR values(105,'PAVAN KUMAR','385456809');
+insert INTO MOVIES values(1111,'LAST WORD',2009,'ENGLISH',104);
+insert INTO MOVIES values(2222,'EEGA',2010,'TELUGU',102);
+insert INTO MOVIES values(3333,'PARAMATHMA',2006,'KANNADA',103);
+insert INTO MOVIES values(4444,'MALE' ,2005,'KANNADA',103);
+insert INTO MOVIES values(5555,'MANASARE',2010,'KANNADA',103);
+insert INTO MOVIES values(6666,'REARWINDOW',1954,'ENGLISH',101);
+insert INTO MOVIES values(7777,'NOTORIOUS',1946,'ENGLISH',101);
+insert INTO MOVIE_CAST VALUES (111,4444,'HEROIN');
+insert INTO MOVIE_CAST VALUES (222,2222,'VILLAN');
+insert INTO MOVIE_CAST VALUES (333,4444,'HERO');
+insert INTO MOVIE_CAST VALUES (444,3333,'GEUST');
+insert INTO MOVIE_CAST VALUES (444,5555,'HERO');
+insert INTO MOVIE_CAST VALUES (555,7777,'MOTHER');
+insert INTO RATING values(1111,3);
+insert INTO RATING values(2222,4);
+
+insert INTO RATING values(4444,5);
+insert INTO RATING values(5555,4);
+select*from RATING;
                                   </textarea>
       </div>
       <div class="details">
