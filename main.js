@@ -32,3 +32,19 @@ function myFunction3() {
   copyText.select(); 
   navigator.clipboard.writeText(copyText.value);
 }
+function myFunction4() {
+  
+  document.getElementById("copied3").innerHTML = "Copied!";
+ 
+   var copyText = document.getElementById("myInput3");
+   copyText.select(); 
+   navigator.clipboard.writeText(copyText.value);
+ }
+ function myFunction5() {
+  
+  document.getElementById("copied4").innerHTML = "Copied!";
+ 
+   var copyText = document.getElementById("myInput4");
+   copyText.select(); 
+   navigator.clipboard.writeText(copyText.value);
+ }
