@@ -3,6 +3,18 @@
     margin: 0;
     box-sizing: border-box;
 } 
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #433e5f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: greenyellow;
 body{
   
   overflow: scroll;
