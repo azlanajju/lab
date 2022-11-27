@@ -3,7 +3,10 @@
     margin: 0;
     box-sizing: border-box;
 } 
-
+::selection {
+  color: white;
+  background:  rgba(122, 242, 10, 0.5);
+} 
 /* custom scroll bar */
 ::-webkit-scrollbar {
   width: 5px;
@@ -188,7 +191,7 @@ textarea{
 
 ::selection {
   color: white;
-  background:  #6DE60D;
+  background:  rgba(122, 242, 10,0.5);
 } 
 @media only screen and (min-width: 980px) {
 
