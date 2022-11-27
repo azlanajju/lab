@@ -48,7 +48,6 @@ function myFunction4() {
    navigator.clipboard.writeText(copyText.value);
  }
  function myFunction6() {
-  alert('program given by Shaan'); 
   document.getElementById("copied5").innerHTML = "Copied!";
  
    var copyText = document.getElementById("myInput5");
