@@ -334,7 +334,7 @@ footer span a:hover{
 .popup .popuptext {
   visibility: hidden;
   width: 100px;
-  background-color: yellowgreen;
+  background-color: #6DE60D;
   color: #fff;
   text-align: center;
   border-radius: 6px;
@@ -356,7 +356,7 @@ footer span a:hover{
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: yellowgreen transparent transparent transparent;
+  border-color: #6DE60D transparent transparent transparent;
 }
 
 /* Toggle this class - hide and show the popup */
