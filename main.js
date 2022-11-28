@@ -8,7 +8,6 @@ function ifno(){
 }
 function myFunction1() {
   
- document.getElementById("copied").innerHTML = "Copied!";
 
   var copyText = document.getElementById("myInput");
   copyText.select(); 
@@ -48,3 +47,12 @@ function myFunction4() {
    copyText.select(); 
    navigator.clipboard.writeText(copyText.value);
  }
+
+
+// When the user clicks on div, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+    
+  
+}
