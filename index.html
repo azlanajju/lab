@@ -112,7 +112,10 @@ INSERT INTO BOOK_LENDING VALUES(333,22,1, '2017-07-10', '2017-07-15');
       </div>
       <div class="details">
 
-        <button class="texts-btn" id="copied" onclick="myFunction1()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
+        <button class="texts-btn" >    
+<div class="popup" onclick="setTimeout(myFunction, 800); setTimeout(myFunction, 5000);setTimeout(myFunction1, 10);"><i class="fa fa-copy"></i> Copy
+  <span class="popuptext" id="myPopup">Copied!</span>
+</div></button>
         <h3>PROGRAM 1</h3>
         <p></p>
       </div>
