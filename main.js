@@ -56,3 +56,12 @@ function myFunction() {
     
   
 }
+function show_img(){
+  document.getElementById('q-img').classList.toggle("q-imgshow");
+var  txt = document.getElementById('toggle_btn');
+  if (txt.innerHTML === "view Query image") {
+    txt.innerHTML = "Close";
+  } else {
+    txt.innerHTML = "view Query image";
+  }
+}
