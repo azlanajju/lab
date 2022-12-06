@@ -233,6 +233,26 @@ textarea{
   bottom:10%;
   z-index: 1;
 }
+
+.q-imgshow{
+  border-radius: 20px;
+  border: 1px solid  #6DE60D;
+  height: 60vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 40px;
+
+}
+
+.q-imgshow2{
+  border-radius: 20px;
+  border: 1px solid  #6DE60D;
+  height: 60vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 40px;
+
+}
 }
   .outline {
     display: none;
@@ -390,13 +410,20 @@ footer span a:hover{
 .q-img img{
   border-radius: 20px;
   border: 1px solid  #6DE60D;
-  margin: 10px;
   display: none;
 }
 .q-imgshow img{
   display: block;
 }
+.q-imgshow{
+  border-radius: 20px;
+  border: 1px solid  #6DE60D;
+  height: 60vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 10px;
 
+}
 
 .q-btn2 button{
   padding:5px 10px;
@@ -415,4 +442,14 @@ footer span a:hover{
 }
 .q-imgshow2 img{
   display: block;
+}
+
+.q-imgshow2{
+  border-radius: 20px;
+  border: 1px solid  #6DE60D;
+  height: 60vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 10px;
+
 }
