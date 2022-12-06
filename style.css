@@ -380,11 +380,12 @@ footer span a:hover{
 
 .q-btn button{
   padding:5px 10px;
-  border: none;
+  border: 1px solid #6DE60D;
   border-radius: 10px;
-  background:  white;
+  background:  #151320;
   color:  #6DE60D;
   transition: 2s;
+  box-shadow: 1px 1px  2px 1px rgba(109, 229, 13,0.7);
 }
 .q-img img{
   border-radius: 20px;
@@ -393,5 +394,25 @@ footer span a:hover{
   display: none;
 }
 .q-imgshow img{
+  display: block;
+}
+
+
+.q-btn2 button{
+  padding:5px 10px;
+  border: 1px solid #6DE60D;
+  border-radius: 10px;
+  background:  #151320;
+  color:  #6DE60D;
+  transition: 2s;
+  box-shadow: 1px 1px  2px 1px rgba(109, 229, 13,0.7);
+}
+.q-img2 img{
+  border-radius: 20px;
+  border: 1px solid  #6DE60D;
+  margin: 10px;
+  display: none;
+}
+.q-imgshow2 img{
   display: block;
 }

@@ -65,3 +65,13 @@ var  txt = document.getElementById('toggle_btn');
     txt.innerHTML = "view Query image";
   }
 }
+
+function show_img2(){
+  document.getElementById('q-img2').classList.toggle("q-imgshow2");
+var  txt = document.getElementById('toggle_btn2');
+  if (txt.innerHTML === "view Query image") {
+    txt.innerHTML = "Close";
+  } else {
+    txt.innerHTML = "view Query image";
+  }
+}
