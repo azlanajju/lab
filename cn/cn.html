@@ -729,6 +729,24 @@ onclick="myFunction7()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</
                 <textarea name="" id="myInput7" cols="90" rows="10">
                                   
 
+
+
+                                  </textarea>
+            </div>
+            <div class="details">
+              
+<button class="texts-btn"  id="copied7"
+onclick="myFunction8()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
+                <h3>PROGRAM 8</h3>
+                <p></p>
+            </div>
+  </div>   
+
+           <!--program 9   -->  
+        <div class="card card3">
+            <div class="container">
+                <textarea name="" id="myInput8" cols="90" rows="10">
+                                  
 package rsa;
 
 import java.io.DataInputStream;
@@ -801,25 +819,6 @@ return(new BigInteger(message)).modPow(d,N).toByteArray();
             </div>
             <div class="details">
               
-<button class="texts-btn"  id="copied7"
-onclick="myFunction8()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
-                <h3>PROGRAM 8</h3>
-                <p></p>
-            </div>
-  </div>   
-
-           <!--program 9   -->  
-        <div class="card card3">
-            <div class="container">
-                <textarea name="" id="myInput8" cols="90" rows="10">
-                                  
-
-            program 9
-
-                                  </textarea>
-            </div>
-            <div class="details">
-              
 <button class="texts-btn"  id="copied8"
 onclick="myFunction9()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
                 <h3>PROGRAM 9</h3>
@@ -832,7 +831,57 @@ onclick="myFunction9()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</
                 <textarea name="" id="myInput9" cols="90" rows="10">
                                   
 
-            program 10
+ package lab7;
+import java.util.Scanner;
+import java.lang.*;
+public class Lab7 {
+public static void main(String[] args)
+{
+int i;
+int a[]=new int[20];
+int buck_rem=0,buck_cap=4,rate=3,sent,recv;
+Scanner in = new Scanner(System.in);
+System.out.println("Enter the number of packets");
+int n = in.nextInt();
+System.out.println("Enter the packets");
+for(i=1;i<=n;i++)
+a[i]= in.nextInt();
+System.out.println("Clock \t packet size \t accept \t sent \t remaining");
+for(i=1;i<=n;i++)
+{
+if(a[i]!=0)
+{
+if(buck_rem+a[i]>buck_cap)
+recv=-1;
+else
+{
+recv=a[i];
+buck_rem+=a[i];
+}
+}
+else
+recv=0;
+if(buck_rem!=0)
+    {
+if(buck_rem<rate)
+{sent=buck_rem;
+buck_rem=0;
+}
+else
+{
+sent=rate;
+buck_rem=buck_rem-rate;
+}
+}
+else
+sent=0;
+if(recv==-1)
+System.out.println(+i+ "\t\t" +a[i]+ "\t dropped \t" + sent +"\t" +buck_rem);
+else
+System.out.println(+i+ "\t\t" +a[i] +"\t\t" +recv +"\t" +sent + "\t" +buck_rem);
+}
+}
+}
 
                                   </textarea>
             </div>
