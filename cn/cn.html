@@ -981,7 +981,51 @@ onclick="myFunction10()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy<
          <div class="card card3">
           <div class="container">
               <textarea name="" id="myInput10" cols="90" rows="10" disabled>
-    // 11th program
+UDP PROGRAM
+		      
+		      import java.net.*;
+import java.util.Scanner;
+public class Server
+{
+public static void main(String[] args) throws Exception
+{
+System.out.println("Sender");
+DatagramSocket ds = new DatagramSocket();
+Scanner scanner = new Scanner(System.in);
+System.out.println("\nEnter the Message : \n");
+while(true)
+{
+String msg = scanner.nextLine();
+InetAddress ip = InetAddress.getByName("127.0.0.1");
+DatagramPacket dp = new DatagramPacket(msg.getBytes(),msg.length(),ip,3000);
+ds.send(dp);
+if(msg.equals("bye"))
+break;
+
+}
+}
+}
+
+
+
+
+import java.net.*;
+public class Client
+{
+public static void main(String[] args) throws Exception
+{
+byte[] buf = new byte[1024];
+System.out.println("Reciever");
+DatagramSocket ds = new DatagramSocket(3000);
+while(true)
+{
+DatagramPacket dp = new DatagramPacket(buf,1024);
+ds.receive(dp);
+String msg = new String(dp.getData(),0,dp.getLength());
+System.out.println(msg);
+}
+}
+}
   
   
   
@@ -999,7 +1043,65 @@ onclick="myFunction10()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy<
            <div class="card card3">
             <div class="container">
                 <textarea name="" id="myInput11" cols="90" rows="10" disabled>
-// 12th program
+
+TCP PROGRAM			
+			import java.net.*;
+import java.io.*;
+
+public class Server {
+    public static void main(String args[]) throws Exception {
+        ServerSocket sersock = new ServerSocket(4000);
+        System.out.println("Server ready for connection");
+
+        Socket sock = sersock.accept();
+        System.out.println("Connection is successful and waiting for chatting");
+
+        BufferedReader fileRead = new BufferedReader(new InputStreamReader(sock.getInputStream()));
+        String fname = fileRead.readLine();
+        BufferedReader contentRead = new BufferedReader(new FileReader(fname));
+
+        PrintWriter pwrite = new PrintWriter(sock.getOutputStream(), true);
+        String str;
+        while ((str = contentRead.readLine()) != null) {
+            pwrite.println(str);
+        }
+        fileRead.close();
+        contentRead.close();
+        pwrite.close();
+        sock.close();
+        sersock.close();
+    }
+}
+
+
+
+
+
+import java.net.*;
+import java.io.*;
+
+public class Client {
+    public static void main(String args[]) throws Exception {
+        Socket sock = new Socket("127.0.0.1", 4000);
+        System.out.println("Enter the filename");
+
+        BufferedReader keyRead = new BufferedReader(new InputStreamReader(System.in));
+        String fname = keyRead.readLine();
+
+        PrintWriter pwrite = new PrintWriter(sock.getOutputStream(), true);
+        pwrite.println(fname);
+
+        BufferedReader socketRead = new BufferedReader(new InputStreamReader(sock.getInputStream()));
+        String str;
+        while ((str = socketRead.readLine()) != null) {
+            System.out.println(str);
+        }
+        keyRead.close();
+        socketRead.close();
+        pwrite.close();
+        sock.close();
+    }
+}
                                   </textarea>
             </div>
             <div class="details">
