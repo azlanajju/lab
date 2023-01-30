@@ -152,7 +152,7 @@ select * from available_books;
     
     <div class="card card2">
       <div class="container">
-        <textarea name="" id="myInput1" cols="90" rows="10">
+        <textarea name="" id="myInput1" cols="90" rows="10" disabled>
      CREATE TABLE SALESMAN(
 SALESMAN_ID INTEGER PRIMARY KEY,
 NAME VARCHAR(20),
@@ -252,7 +252,7 @@ SELECT * FROM ORDERS;
     </div>
     <div class="card card3">
       <div class="container">
-        <textarea name="" id="myInput2" cols="90" rows="10">
+        <textarea name="" id="myInput2" cols="90" rows="10" disabled>
                                 CREATE TABLE ACTOR (ACT_ID INT(5) PRIMARY KEY, ACT_NAME VARCHAR(15) NOT NULL, ACT_GENDER VARCHAR(2) not null);
 CREATE TABLE DIRECTOR (DIR_ID int PRIMARY KEY, DIR_NAME varchar(18) NOT NULL, DIR_PHONE VARCHAR(10) NOT NULL);
 create table MOVIES (MOV_ID INT primary key, MOV_TITLE VARCHAR(10) NOT null, MOV_YEAR INT NOT NULL ,MOV_LANG varchar(10) NOT NULL ,DIR_ID INT NOT NULL, FOREIGN KEY(DIR_ID) REFERENCES DIRECTOR(DIR_ID) ON DELETE CASCADE);
@@ -311,7 +311,7 @@ UPDATE RATING SET REV_STARS=5 WHERE MOV_ID IN(SELECT MOV_ID FROM MOVIES M, DIREC
         <!--  program 4     --> 
         <div class="card card1">
             <div class="container">
-                <textarea  name="" id="myInput3" cols="90" rows="10">
+                <textarea  name="" id="myInput3" cols="90" rows="10" disabled>
 
                   CREATE TABLE STUDENT(USN VARCHAR (10) PRIMARY KEY,SNAME VARCHAR(25),ADDRESS VARCHAR(25),PHONE VARCHAR(10),GENDER CHAR(1));
 CREATE TABLE SEMSEC(SSID VARCHAR(5)PRIMARY KEY,SEM TINYINT,SEC CHAR(1));
@@ -390,7 +390,7 @@ onclick="myFunction4()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</
           <!--    program5    -->
         <div class="card card2">
             <div class="container">
-              <textarea  name="" id="myInput4" cols="90" rows="10">
+              <textarea  name="" id="myInput4" cols="90" rows="10" disabled>
 CREATE TABLE DEPARTMENT(DNO tinyint PRIMARY KEY,DNAME VARCHAR(15) NOT NULL, MGRSSN CHAR(10),MGRSTARTDATE DATE);
 
 CREATE TABLE EMPLOYEE(SSN CHAR(10) PRIMARY KEY, NAME VARCHAR(18) NOT NULL,ADDRESS VARCHAR(18),SEX VARCHAR(3),SALARY REAL,SUPER_SSN CHAR(10),DNO tinyint,FOREIGN KEY(DNO) REFERENCES DEPARTMENT(DNO));
