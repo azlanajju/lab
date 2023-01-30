@@ -82,3 +82,17 @@ function myFunction4() {
    copyText.select(); 
    navigator.clipboard.writeText(copyText.value);
  }
+ function myFunction11() {
+  document.getElementById("copied10").innerHTML = "Copied!";
+ 
+   var copyText = document.getElementById("myInput10");
+   copyText.select(); 
+   navigator.clipboard.writeText(copyText.value);
+ }
+ function myFunction12() {
+  document.getElementById("copied11").innerHTML = "Copied!";
+ 
+   var copyText = document.getElementById("myInput11");
+   copyText.select(); 
+   navigator.clipboard.writeText(copyText.value);
+ }
