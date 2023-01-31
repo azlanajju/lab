@@ -87,7 +87,7 @@ font-weight: bolder;
 } 
 .card{
    margin: 10px;
-    border:1px solid #6DE60D;
+/*     border:1px solid #6DE60D; */
     border: 1px solid  grey;
     margin: 10px;
     margin-top: 20px;
@@ -174,7 +174,7 @@ textarea{
 .upload a i{
   font-size: 30px;
   color: white;
-  background: #6DE60D;
+/*   background: #6DE60D; */
   background: grey;
   padding:8px 10px;
   border-radius: 50%;
