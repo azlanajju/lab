@@ -96,3 +96,4 @@ function myFunction4() {
    copyText.select(); 
    navigator.clipboard.writeText(copyText.value);
  }
+// alert('All the Best  ❤️');

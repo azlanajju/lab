@@ -75,3 +75,4 @@ var  txt = document.getElementById('toggle_btn2');
     txt.innerHTML = "view Query image";
   }
 }
+// alert('All the Best  ❤️');

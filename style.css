@@ -11,10 +11,12 @@
 
 ::-webkit-scrollbar-track {
   background: #433e5f;
+  background: #151320;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #55d925;
+  background: grey;
 }
 body{
   
@@ -22,6 +24,7 @@ body{
   
   width:100%;
     background-color: #151320;
+    background: black;
     height: 100vh;
     font-family: 'Poppins',sans-serif;
 }
@@ -45,6 +48,7 @@ body{
   
   animation: glow 1s ease-in-out infinite alternate;
 color: #6DE60D;
+color: grey;
 font-weight: bolder;
 
   
@@ -71,6 +75,7 @@ font-weight: bolder;
 }
 .subactiv a{
   color: #6DE60D;
+  color: grey;
 }
 
 /* cards */
@@ -83,9 +88,11 @@ font-weight: bolder;
 .card{
    margin: 10px;
     border:1px solid #6DE60D;
+    border: 1px solid  grey;
     margin: 10px;
     margin-top: 20px;
     background-color: #1c1b29;
+    background-color: black;
     border-radius: 20px;
     box-shadow: 0 0 30px rgba(0,0,0,0.18);
 }
@@ -97,7 +104,6 @@ font-weight: bolder;
 }
 textarea{
   color: white;
-  
   overflow-y: scroll;
   font-weight: bold;
   padding: 15px;
@@ -169,6 +175,7 @@ textarea{
   font-size: 30px;
   color: white;
   background: #6DE60D;
+  background: grey;
   padding:8px 10px;
   border-radius: 50%;
   position: fixed;
@@ -204,11 +211,13 @@ textarea{
 
 .subactiv a{
   color: #6DE60D;
+  color: grey;
 }
 
 .card{
    margin: 40px;
     border:1px solid #6DE60D;
+    color: grey;
     
     margin-top: 20px;
     background-color: #1c1b29;
@@ -226,6 +235,7 @@ textarea{
   font-size: 30px;
   color: white;
   background: greenyellow;
+  color: grey;
   padding:8px 10px;
   border-radius: 50%;
   position: fixed;
@@ -237,6 +247,7 @@ textarea{
 .q-imgshow{
   border-radius: 20px;
   border: 1px solid  #6DE60D;
+  color: grey;
   height: 60vh;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -247,6 +258,7 @@ textarea{
 .q-imgshow2{
   border-radius: 20px;
   border: 1px solid  #6DE60D;
+  color: grey;
   height: 60vh;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -296,12 +308,14 @@ textarea{
   border-radius: 5px;
   
   background: #58CA1DAD;
+  color: #333;
 
 }
 
 ::selection {
   color: white;
   background:  #6DE60D;
+  background: grey;
 } 
 
 /* footer section styling */
@@ -314,6 +328,7 @@ footer{
 }
 footer span a{
     color: greenyellow;
+    color: grey;
     text-decoration: none;
 }
 footer span a:hover{
@@ -355,6 +370,8 @@ footer span a:hover{
   visibility: hidden;
   width: 100px;
   background-color: #6DE60D;
+  background: grey;
+  background: grey;
   color: #fff;
   text-align: center;
   border-radius: 6px;
@@ -377,6 +394,8 @@ footer span a:hover{
   border-width: 5px;
   border-style: solid;
   border-color: #6DE60D transparent transparent transparent;
+
+  border-color: #333 transparent transparent transparent;
 }
 
 /* Toggle this class - hide and show the popup */
@@ -401,15 +420,19 @@ footer span a:hover{
 .q-btn button{
   padding:5px 10px;
   border: 1px solid #6DE60D;
+  border: grey;
   border-radius: 10px;
   background:  #151320;
   color:  #6DE60D;
+  color: grey;
   transition: 2s;
   box-shadow: 1px 1px  2px 1px rgba(109, 229, 13,0.7);
+  box-shadow: 1px 1px  2px 1px rgba(66, 66, 66, 0.7);
 }
 .q-img img{
   border-radius: 20px;
   border: 1px solid  #6DE60D;
+  border: 1px solid grey;
   display: none;
 }
 .q-imgshow img{
@@ -418,6 +441,7 @@ footer span a:hover{
 .q-imgshow{
   border-radius: 20px;
   border: 1px solid  #6DE60D;
+  border: 1px solid  grey;
   height: 60vh;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -428,9 +452,11 @@ footer span a:hover{
 .q-btn2 button{
   padding:5px 10px;
   border: 1px solid #6DE60D;
+  border: 1px solid  grey;
   border-radius: 10px;
   background:  #151320;
   color:  #6DE60D;
+  color: grey;
   transition: 2s;
   box-shadow: 1px 1px  2px 1px rgba(109, 229, 13,0.7);
 }
@@ -446,6 +472,7 @@ footer span a:hover{
 .q-imgshow2{
   border-radius: 20px;
   border: 1px solid  #6DE60D;
+  border: 1px solid  grey;
   height: 60vh;
   overflow-y: scroll;
   overflow-x: hidden;
