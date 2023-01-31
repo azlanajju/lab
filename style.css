@@ -217,6 +217,7 @@ textarea{
 .card{
    margin: 40px;
     border:1px solid #6DE60D;
+    border:1px solid grey;
     color: grey;
     
     margin-top: 20px;
@@ -235,7 +236,9 @@ textarea{
   font-size: 30px;
   color: white;
   background: greenyellow;
-  color: grey;
+    background: grey;
+    color:grey;
+  color: #000;
   padding:8px 10px;
   border-radius: 50%;
   position: fixed;
