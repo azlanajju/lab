@@ -91,7 +91,7 @@ font-weight: bolder;
     margin: 10px;
     margin-top: 20px;
     background-color: #1c1b29;
-    background-color: black;
+   
     border-radius: 20px;
     box-shadow: 0 0 30px rgba(0,0,0,0.18);
 }
@@ -235,9 +235,9 @@ textarea{
   font-size: 30px;
   color: white;
   background: greenyellow;
-    background: grey;
+    
     color:grey;
-  color: #000;
+  
   padding:8px 10px;
   border-radius: 50%;
   position: fixed;
