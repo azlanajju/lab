@@ -11,12 +11,12 @@
 
 ::-webkit-scrollbar-track {
   background: #433e5f;
-  background: #151320;
+ 
 }
 
 ::-webkit-scrollbar-thumb {
   background: #55d925;
-  background: grey;
+ 
 }
 body{
   
@@ -24,7 +24,7 @@ body{
   
   width:100%;
     background-color: #151320;
-    background: black;
+   
     height: 100vh;
     font-family: 'Poppins',sans-serif;
 }
@@ -48,7 +48,6 @@ body{
   
   animation: glow 1s ease-in-out infinite alternate;
 color: #6DE60D;
-color: grey;
 font-weight: bolder;
 
   
@@ -75,7 +74,7 @@ font-weight: bolder;
 }
 .subactiv a{
   color: #6DE60D;
-  color: grey;
+  
 }
 
 /* cards */
@@ -87,8 +86,8 @@ font-weight: bolder;
 } 
 .card{
    margin: 10px;
-/*     border:1px solid #6DE60D; */
-    border: 1px solid  grey;
+   border:1px solid #6DE60D; 
+   
     margin: 10px;
     margin-top: 20px;
     background-color: #1c1b29;
@@ -174,8 +173,8 @@ textarea{
 .upload a i{
   font-size: 30px;
   color: white;
-/*   background: #6DE60D; */
-  background: grey;
+  background: #6DE60D;
+ 
   padding:8px 10px;
   border-radius: 50%;
   position: fixed;
@@ -211,14 +210,14 @@ textarea{
 
 .subactiv a{
   color: #6DE60D;
-  color: grey;
+  
 }
 
 .card{
    margin: 40px;
     border:1px solid #6DE60D;
-    border:1px solid grey;
-    color: grey;
+   
+    color:grey;
     
     margin-top: 20px;
     background-color: #1c1b29;
@@ -318,7 +317,7 @@ textarea{
 ::selection {
   color: white;
   background:  #6DE60D;
-  background: grey;
+ 
 } 
 
 /* footer section styling */
@@ -331,7 +330,7 @@ footer{
 }
 footer span a{
     color: greenyellow;
-    color: grey;
+    
     text-decoration: none;
 }
 footer span a:hover{
