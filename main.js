@@ -9,12 +9,6 @@ function copyText(elementId, copiedElementId) {
 
 
 
-function myFunction() {
-  var popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
-    
-  
-}
 
 
-
+alert('Under Maintenance');
