@@ -76,3 +76,4 @@ var  txt = document.getElementById('toggle_btn2');
   }
 }
 // alert('All the Best  ❤️');
+alert('getting ready!')
