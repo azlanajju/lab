@@ -11,4 +11,3 @@ function copyText(elementId, copiedElementId) {
 
 
 
-alert('Under Maintenance');
