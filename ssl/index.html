@@ -198,7 +198,54 @@
   <div class="card card3">
     <div class="container">
       <textarea name="" id="myInput5" cols="90" rows="10">
-              </textarea>
+
+            <!-- lex -->
+            %{
+              #include<stdio.h>
+              int sl=0;
+              int ml=0;
+              %}
+              %%
+              "/*"[a-zA-Z0-9' '\t\n]+"*/" ml++;
+              "//".* sl++;
+              %%
+              int main()
+              {
+              yyin=fopen("f1.c","r");
+              yyout=fopen("f2.c","w");
+              yylex();
+              fclose(yyin);
+              fclose(yyout);
+              printf("\n Number of single line comments are =%d\n",sl);
+              printf("\nNumber of multiline comments are=%d\n",ml);
+              return 0;
+              }
+              
+              <!-- c (f1.c) -->
+
+              //test progrqm
+              #include<stdio.h>
+              int main()
+              {
+              /*abcd
+              sbbnd
+              bbsg*/
+              printf("hello");
+              printf("world");
+              return 0;
+              }
+          
+
+              <!-- output -->
+
+              lex 6a.l
+              gcc lex.yy.c -ll
+              ./a.out
+           
+              Number of single line comments are =1
+              Number of multiline comments are=1
+          
+          </textarea>
     </div>
     <div class="details">
       <button class="texts-btn" id="copied5" onclick="copyText('myInput5', 'copied5')"><i class="fa fa-copy"></i>
