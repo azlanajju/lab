@@ -118,6 +118,28 @@
       exit(0);
       }
 
+
+      <!-- output -->
+
+
+      lex 2.l
+      yacc -d 2.y
+      cc lex.yy.c y.tab.c -ll
+      ./a.out
+      
+      Enter A String
+      ab
+      Successful Grammar
+      
+      Enter A String
+      ac
+      c
+      invalid string 
+      
+      Enter A String
+      azlanb
+      zlnSuccessful Grammar
+
         </textarea>
     </div>
     <div class="details">
