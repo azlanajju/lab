@@ -81,7 +81,43 @@
   <div class="card card2">
     <div class="container">
       <textarea name="" id="myInput1" cols="90" rows="10">
-          pgm2
+         
+        <!-- lex -->
+              %{
+      #include "y.tab.h"
+      %}
+      %%
+      a {return A;}
+      b {return B;}
+      [\n] return '\n';
+      %%
+
+
+        <!-- yacc -->
+
+      %{
+      #include<stdio.h>
+      #include<stdlib.h>
+      int yylex();
+      int yyerror();
+      %}
+      %token A B
+      %%
+      input:s'\n' {printf("Successful Grammar\n");exit(0);}
+      s: A s1 B| B
+      s1: ; | A s1;
+      %%
+      int main()
+      {
+      printf("\nEnter A String\n");
+      yyparse();
+      }
+      int yyerror()
+      {
+      printf("\ninvalid string \n");
+      exit(0);
+      }
+
         </textarea>
     </div>
     <div class="details">
