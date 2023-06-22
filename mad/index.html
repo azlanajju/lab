@@ -94,7 +94,7 @@ android:layout_marginEnd="180dp"
 android:layout_marginRight="180dp"
 android:layout_marginBottom="39dp"
 android:text="P.A. COLLEGE OF ENGINEERING"
-Prof. Tuba Nageen Nakhuda Dept. of CSE, PACE, Mangaluru 9
+
 android:textAlignment="center"
 android:textColor="#020202"
 android:textSize="24sp"
@@ -125,7 +125,7 @@ android:text="Tuba Nageen Nakhuda"
 android:textAlignment="center"
 android:textColor="#C68A8A"
 android:textSize="16sp"
-Prof. Tuba Nageen Nakhuda Dept. of CSE, PACE, Mangaluru 10
+
 android:textStyle="normal|bold" />
 <TextView
 android:id="@+id/textView6"
@@ -157,7 +157,7 @@ android:text="Near Mangalore University, Kudla, Konaje Proper, Karnataka
 574153"
 android:textAlignment="center"
 android:textColor="#BD9393"
-Prof. Tuba Nageen Nakhuda Dept. of CSE, PACE, Mangaluru 11
+
 android:textSize="16sp"
 android:textStyle="normal|bold" />
 <TextView
@@ -172,6 +172,17 @@ android:textSize="16sp"
 android:textStyle="normal|bold" />
 </LinearLayout>
 
+    <!-- MainActivity.java -->
+package com.example.visitingcard;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+public class MainActivity extends AppCompatActivity {
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+super.onCreate(savedInstanceState);
+setContentView(R.layout.activity_main);
+}
+}
         
               </textarea>
     </div>
@@ -188,7 +199,408 @@ android:textStyle="normal|bold" />
   <div class="card card2">
     <div class="container">
       <textarea name="" id="myInput1" cols="90" rows="10">
-          pgm2
+          <!--  XML File:  activity_main.xml  -->
+<Button
+android:id="@+id/btn_0"
+android:layout_width="60dp"
+android:layout_height="60dp"
+android:background="#9C27B0"
+android:text="0"
+android:textColor="#502C2C"
+android:textSize="18sp"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.353"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintVertical_bias="0.74" />
+<Button
+android:id="@+id/btn_dot"
+android:layout_width="60dp"
+android:layout_height="60dp"
+android:background="#9C27B0"
+android:text="."
+android:textColor="#502C2C"
+android:textSize="18sp"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.079"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintVertical_bias="0.74" />
+<Button
+android:id="@+id/btn_add"
+android:layout_width="60dp"
+android:layout_height="60dp"
+android:background="#9C27B0"
+android:text="+"
+android:textColor="#502C2C"
+android:textSize="18sp"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.903"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintVertical_bias="0.74" />
+<Button
+android:id="@+id/btn_equal"
+android:layout_width="60dp"
+android:layout_height="60dp"
+android:background="#9C27B0"
+android:text="="
+android:textColor="#502C2C"
+android:textSize="18sp"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.615"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintVertical_bias="0.74" />
+<Button
+android:id="@+id/btn_5"
+android:layout_width="60dp"
+android:layout_height="60dp"
+android:background="#9C27B0"
+android:text="5"
+android:textColor="#502C2C"
+
+android:textSize="18sp"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.353"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintVertical_bias="0.475" />
+<Button
+android:id="@+id/btn_2"
+android:layout_width="60dp"
+android:layout_height="60dp"
+android:background="#9C27B0"
+android:text="2"
+android:textColor="#502C2C"
+android:textSize="18sp"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.353"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintVertical_bias="0.609" />
+<Button
+android:id="@+id/btn_1"
+android:layout_width="60dp"
+android:layout_height="60dp"
+android:background="#9C27B0"
+android:text="1"
+android:textColor="#502C2C"
+android:textSize="18sp"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.079"
+
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintVertical_bias="0.609" />
+<Button
+android:id="@+id/btn_sub"
+android:layout_width="60dp"
+android:layout_height="60dp"
+android:background="#9C27B0"
+android:text="-"
+android:textColor="#502C2C"
+android:textSize="18sp"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.903"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintVertical_bias="0.609" />
+<Button
+android:id="@+id/btn_3"
+android:layout_width="60dp"
+android:layout_height="60dp"
+android:background="#9C27B0"
+android:text="3"
+android:textColor="#502C2C"
+android:textSize="18sp"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.615"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintVertical_bias="0.609" />
+
+<Button
+android:id="@+id/btn_4"
+android:layout_width="60dp"
+android:layout_height="60dp"
+android:background="#9C27B0"
+android:text="4"
+android:textColor="#502C2C"
+android:textSize="18sp"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.079"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintVertical_bias="0.475" />
+<Button
+android:id="@+id/btn_mul"
+android:layout_width="60dp"
+android:layout_height="60dp"
+android:background="#9C27B0"
+android:text="*"
+android:textColor="#502C2C"
+android:textSize="18sp"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.903"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintVertical_bias="0.475" />
+<Button
+android:id="@+id/btn_6"
+android:layout_width="60dp"
+android:layout_height="60dp"
+
+android:background="#9C27B0"
+android:text="6"
+android:textColor="#502C2C"
+android:textSize="18sp"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.615"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintVertical_bias="0.475" />
+<TextView
+android:id="@+id/textView"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Simple Calculator"
+android:textColor="#E91E63"
+android:textSize="24sp"
+android:textStyle="bold|italic"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.551"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintVertical_bias="0.022" />
+<TextView
+android:id="@+id/textView2"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Result"
+android:textColor="#3F51B5"
+android:textSize="20sp"
+android:textStyle="bold"
+
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.186"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintVertical_bias="0.116" />
+<Button
+android:id="@+id/btn_7"
+android:layout_width="60dp"
+android:layout_height="60dp"
+android:background="#9C27B0"
+android:text="7"
+android:textColor="#502C2C"
+android:textSize="18sp"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.08"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintVertical_bias="0.333" />
+<Button
+android:id="@+id/btn_8"
+android:layout_width="60dp"
+android:layout_height="60dp"
+android:background="#9C27B0"
+android:text="8"
+android:textColor="#502C2C"
+android:textSize="18sp"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.353"
+app:layout_constraintStart_toStartOf="parent"
+
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintVertical_bias="0.333" />
+<Button
+android:id="@+id/btn_9"
+android:layout_width="60dp"
+android:layout_height="60dp"
+android:background="#9C27B0"
+android:text="9"
+android:textColor="#502C2C"
+android:textSize="18sp"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.615"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintVertical_bias="0.333" />
+<Button
+android:id="@+id/btn_div"
+android:layout_width="60dp"
+android:layout_height="60dp"
+android:background="#9C27B0"
+android:text="/"
+android:textColor="#502C2C"
+android:textSize="18sp"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.903"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintVertical_bias="0.333" />
+<EditText
+
+android:id="@+id/TextInput"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginEnd="100dp"
+android:layout_marginRight="100dp"
+android:layout_marginBottom="548dp"
+android:ems="10"
+android:inputType="text"
+android:text="Input"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent" />
+</android.support.constraint.ConstraintLayout>
+
+        
+<!--  Java File:  -->
+MainActivity.java
+package com.example.simplecalculator;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+Button btn_1,btn_2,btn_3,btn_4,btn_5,btn_6,btn_7,btn_8,btn_9,btn_0;
+Button btn_dot,btn_clear,btn_add,btn_mul,btn_sub,btn_div,btn_equal;
+EditText tres;
+@Override
+protected void onCreate(Bundle savedInstanceState)
+{
+super.onCreate(savedInstanceState);
+setContentView(R.layout.activity_main);
+
+btn_0=(Button)findViewById(R.id.btn_0);
+btn_0.setOnClickListener(this);
+btn_1=(Button)findViewById(R.id.btn_1);
+btn_1.setOnClickListener(this);
+btn_2=(Button)findViewById(R.id.btn_2);
+btn_2.setOnClickListener(this);
+btn_3=(Button)findViewById(R.id.btn_3);
+btn_3.setOnClickListener(this);
+btn_4=(Button)findViewById(R.id.btn_4);
+btn_4.setOnClickListener(this);
+btn_5=(Button)findViewById(R.id.btn_5);
+btn_5.setOnClickListener(this);
+btn_6=(Button)findViewById(R.id.btn_6);
+btn_6.setOnClickListener(this);
+btn_7=(Button)findViewById(R.id.btn_7);
+btn_7.setOnClickListener(this);
+btn_8=(Button)findViewById(R.id.btn_8);
+btn_8.setOnClickListener(this);
+btn_9=(Button)findViewById(R.id.btn_9);
+btn_9.setOnClickListener(this);
+btn_dot=(Button)findViewById(R.id.btn_dot);
+btn_dot.setOnClickListener(this);
+btn_div=(Button)findViewById(R.id.btn_div);
+btn_div.setOnClickListener(this);
+btn_mul=(Button)findViewById(R.id.btn_mul);
+btn_mul.setOnClickListener(this);
+btn_add=(Button)findViewById(R.id.btn_add);
+btn_add.setOnClickListener(this);
+btn_sub=(Button)findViewById(R.id.btn_sub);
+btn_sub.setOnClickListener(this);
+btn_clear=(Button)findViewById(R.id.btn_clear);
+btn_clear.setOnClickListener(this);
+btn_equal=(Button)findViewById(R.id.btn_equal);
+btn_equal.setOnClickListener(this);
+
+
+tres=(EditText)findViewById(R.id.TextInput); tres.setText("");
+}
+@Override
+public void onClick(View v) { 
+        if(v.equals(btn_0))
+tres.append("0");
+
+
+if(v.equals(btn_1)) tres.append("1");
+
+if(v.equals(btn_2)) tres.append("2");
+
+if(v.equals(btn_3)) tres.append("3");
+
+if(v.equals(btn_4)) tres.append("4");
+
+if(v.equals(btn_5)) tres.append("5");
+
+if(v.equals(btn_6)) tres.append("6");
+
+if(v.equals(btn_7)) tres.append("7");
+if(v.equals(btn_8)) tres.append("8");
+
+if(v.equals(btn_9))
+tres.append("9");
+
+
+if(v.equals(btn_dot)) tres.append(".");
+
+if(v.equals(btn_add)) tres.append("+");
+
+if(v.equals(btn_sub)) tres.append("-");
+
+if(v.equals(btn_mul)) tres.append("*");
+
+if(v.equals(btn_div)) tres.append("/");
+
+if(v.equals(btn_clear)) tres.setText("");
+
+if(v.equals(btn_equal)) { try {
+String data = tres.getText().toString(); if (data.contains("/")) {
+String[] operands = data.split("/"); if(operands.length==2){
+double op1 = Double.parseDouble(operands[0]);
+        double op2 = Double.parseDouble(operands[1]); 
+        double result = op1/op2; 
+        tres.setText(String.valueOf(result));
+}
+}
+if (data.contains("*")) {
+String[] operands = data.split("\\*");
+if(operands.length==2){
+double op1 = Double.parseDouble(operands[0]); double op2 = Double.parseDouble(operands[1]); double result = op1*op2; tres.setText(String.valueOf(result));
+}
+}
+if (data.contains("+")) {
+        String[] operands = data.split("\\+"); if(operands.length==2){
+double op1 = Double.parseDouble(operands[0]); double op2 = Double.parseDouble(operands[1]);
+
+double result = op1+op2; tres.setText(String.valueOf(result));
+}
+}
+if (data.contains("-")) {
+String[] operands = data.split("-"); if(operands.length==2){
+double op1 = Double.parseDouble(operands[0]); double op2 = Double.parseDouble(operands[1]); double result = op1-op2; tres.setText(String.valueOf(result));
+}
+}
+} catch (NumberFormatException e) { Toast.makeText(getApplicationContext(),"Input Error",
+Toast.LENGTH_LONG).show();
+}
+}
+}
+}
         </textarea>
     </div>
     <div class="details">
@@ -335,7 +747,7 @@ android:textStyle="normal|bold" />
   <!-- Project -->
   <script src="../main.js"></script>
   <script>
-    alert('Under Maintenance');
+    // alert('Under Maintenance');
   </script>
 </body>
 <!-- footer section start -->
