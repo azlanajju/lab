@@ -475,7 +475,7 @@ app:layout_constraintEnd_toEndOf="parent" />
 
         
 <!--  Java File:  -->
-MainActivity.java
+<!-- MainActivity.java -->
 package com.example.simplecalculator;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -714,11 +714,11 @@ Toast.makeText(MainActivity.this, "Invaild Password", Toast.LENGTH_SHORT).show()
 public boolean validatePassword(String pwd){ Pattern pattern = Pattern.compile(regularExpr); Matcher matcher = pattern.matcher(pwd); return matcher.matches();
 }
 }
+
+        
 <!-- sign_in.java -->
 
-
 package com.example.signup;
-
 
 import android.support.v7.app.AppCompatActivity; import android.os.Bundle;
 import android.view.View; import android.widget.Button; import android.widget.EditText; import android.widget.Toast;
@@ -777,8 +777,9 @@ Toast.makeText(sign_in.this, "Failed", Toast.LENGTH_SHORT).show();
   <div class="card card3">
     <div class="container">
       <textarea name="" id="myInput3" cols="90" rows="10">
-       <!-- Xml Code: -->
-activity_main.xml
+     
+        <!-- Xml Code: -->
+<!-- activity_main.xml -->
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent"
 android:gravity="center"
@@ -790,10 +791,9 @@ android:id="@+id/btn" android:layout_width="wrap_content" android:layout_height=
 </LinearLayout>
 
         <!-- Java Code: -->
-MainActivity.java
+<!-- MainActivity.java -->
+        
 package com.example.wallpaper;
-
-
 import android.app.WallpaperManager; import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity; import android.os.Bundle;
 import android.view.View; import android.widget.Button;
@@ -856,7 +856,8 @@ catch (IOException e) { e.printStackTrace();
 
 
 <!-- Manifest Code: -->
-AndroidManifest.xml
+<!-- AndroidManifest.xml -->
+        
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.wallpaper">
 <uses-permission android:name="android.permission.SET_WALLPAPER">
