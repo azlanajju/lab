@@ -371,4 +371,7 @@ body {
 .explorer_dots{
     display: none;
 }
+.text_area{
+    font-size: 12px;
+}
 }
