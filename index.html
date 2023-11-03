@@ -152,7 +152,7 @@
             <pre>
     <code  class="language-java">
     
-       def aStarAlgo(start_node, stop_node):
+def aStarAlgo(start_node, stop_node):
     open_set = set(start_node)
     closed_set = set()
     g = {}               #store distance from starting node
@@ -302,12 +302,99 @@ aStarAlgo('A', 'J')
         <div class="text_area" id="program2">
             <pre>
 <code class="language-java">
-    public class PrintName {
+    class Graph:
+    def __init__(self, graph, heuristicNodeList, startNode): #instantiate graph object with graph topology, heuristic values, start node
+        self.graph = graph
+        self.H=heuristicNodeList
+        self.start=startNode
+        self.parent={}
+        self.status={}
+        self.solutionGraph={}
+        
+    def applyAOStar(self): # starts a recursive AO* algorithm
+        self.aoStar(self.start, False)
 
-        public static void main(String[] args) {
-            System.out.println("My name is Azlan");
-        }
-    }
+    def getNeighbors(self, v): # gets the Neighbors of a given node
+        return self.graph.get(v,'')
+
+    def getStatus(self,v): # return the status of a given node
+        return self.status.get(v,0)
+
+    def setStatus(self,v, val): # set the status of a given node
+        self.status[v]=val
+
+    def getHeuristicNodeValue(self, n):
+        return self.H.get(n,0) # always return the heuristic value of a given node
+
+    def setHeuristicNodeValue(self, n, value):
+        self.H[n]=value # set the revised heuristic value of a given node
+
+    def printSolution(self):
+        print("FOR GRAPH SOLUTION, TRAVERSE THE GRAPH FROM THE START NODE:",self.start)
+        print("------------------------------------------------------------")
+        print(self.solutionGraph)
+        print("------------------------------------------------------------")
+
+    def computeMinimumCostChildNodes(self, v): # Computes the Minimum Cost of child nodes of a given node v
+        minimumCost=0
+        costToChildNodeListDict={}
+        costToChildNodeListDict[minimumCost]=[]
+        flag=True
+        for nodeInfoTupleList in self.getNeighbors(v): # iterate over all the set of child node/s
+            cost=0
+            nodeList=[]
+            for c, weight in nodeInfoTupleList:
+                cost=cost+self.getHeuristicNodeValue(c)+weight
+                nodeList.append(c)
+            if flag==True: # initialize Minimum Cost with the cost of first set of child node/s
+                minimumCost=cost
+                costToChildNodeListDict[minimumCost]=nodeList # set the Minimum Cost child node/s
+                flag=False
+            else: # checking the Minimum Cost nodes with the current Minimum Cost
+                if minimumCost>cost:
+                    minimumCost=cost
+                    costToChildNodeListDict[minimumCost]=nodeList # set the Minimum Cost child node/s
+        return minimumCost, costToChildNodeListDict[minimumCost] # return Minimum Cost and Minimum Cost child node/s
+
+    def aoStar(self, v, backTracking): # AO* algorithm for a start node and backTracking status flag
+        print("HEURISTIC VALUES :", self.H)
+        print("SOLUTION GRAPH :", self.solutionGraph)
+        print("PROCESSING NODE :", v)
+        print("-----------------------------------------------------------------------------------------")
+        if self.getStatus(v) >= 0: # if status node v >= 0, compute Minimum Cost nodes of v
+            minimumCost, childNodeList = self.computeMinimumCostChildNodes(v)
+            print(minimumCost, childNodeList)
+            self.setHeuristicNodeValue(v, minimumCost)
+            self.setStatus(v,len(childNodeList))
+            solved=True # check the Minimum Cost nodes of v are solved
+            for childNode in childNodeList:
+                self.parent[childNode]=v
+                if self.getStatus(childNode)!=-1:
+                    solved=solved & False
+            if solved==True: # if the Minimum Cost nodes of v are solved, set the current node status as solved(-1)
+                self.setStatus(v,-1)
+                self.solutionGraph[v]=childNodeList # update the solution graph with the solved nodes which may be a part of solution
+            if v!=self.start: # check the current node is the start node for backtracking the current node value
+                self.aoStar(self.parent[v], True) # backtracking the current node value with backtracking status set to true
+            if backTracking==False: # check the current call is not for backtracking 
+                for childNode in childNodeList: # for each Minimum Cost child node
+                    self.setStatus(childNode,0) # set the status of child node to 0(needs exploration)
+                    self.aoStar(childNode, False) # Minimum Cost child node is further explored with backtracking status as false
+
+#for simplicity we ll consider heuristic distances given
+print ("Graph - 1")
+h1 = {'A': 1, 'B': 6, 'C': 2, 'D': 12, 'E': 2, 'F': 1, 'G': 5, 'H': 7, 'I': 7, 'J': 1}
+graph1 = {
+    'A': [[('B', 1), ('C', 1)], [('D', 1)]],
+    'B': [[('G', 1)], [('H', 1)]],
+    'C': [[('J', 1)]],
+    'D': [[('E', 1), ('F', 1)]],
+    'G': [[('I', 1)]]
+}
+
+G1= Graph(graph1, h1, 'A')
+G1.applyAOStar()
+G1.printSolution()
     
     </code>
     </pre>
@@ -358,12 +445,91 @@ aStarAlgo('A', 'J')
         <div class="text_area" id="program3">
             <pre>
 <code class="language-java" >
-    public class PrintName {
+    import numpy as np 
+import pandas as pd
 
-        public static void main(String[] args) {
-            System.out.println("My name is Azlan");
-        }
-    }
+data = pd.read_csv('Book1.csv')
+concepts = np.array(data.iloc[:,0:-1])
+print("\nInstances are:\n",concepts)
+target = np.array(data.iloc[:,-1])
+print("\nTarget Values are: ",target)
+
+def learn(concepts, target): 
+    specific_h = concepts[0].copy()
+    print("\nInitialization of specific_h and genearal_h")
+    print("\nSpecific Boundary: ", specific_h)
+    general_h = [["?" for i in range(len(specific_h))] for i in range(len(specific_h))]
+    print("\nGeneric Boundary: ",general_h)  
+
+    for i, h in enumerate(concepts):
+        print("\nInstance", i+1 , "is ", h)
+        if target[i] == "yes":
+            print("Instance is Positive ")
+            for x in range(len(specific_h)): 
+                if h[x]!= specific_h[x]:                    
+                    specific_h[x] ='?'                     
+                    general_h[x][x] ='?'
+                   
+        if target[i] == "no":            
+            print("Instance is Negative ")
+            for x in range(len(specific_h)): 
+                if h[x]!= specific_h[x]:                    
+                    general_h[x][x] = specific_h[x]                
+                else:                    
+                    general_h[x][x] = '?'        
+        
+        print("Specific Bundary after ", i+1, "Instance is ", specific_h)         
+        print("Generic Boundary after ", i+1, "Instance is ", general_h)
+        print("\n")
+
+    indices = [i for i, val in enumerate(general_h) if val == ['?', '?', '?', '?', '?', '?']]    
+    for i in indices:   
+        general_h.remove(['?', '?import numpy as np 
+import pandas as pd
+
+data = pd.read_csv('Book1.csv')
+concepts = np.array(data.iloc[:,0:-1])
+print("\nInstances are:\n",concepts)
+target = np.array(data.iloc[:,-1])
+print("\nTarget Values are: ",target)
+
+def learn(concepts, target): 
+    specific_h = concepts[0].copy()
+    print("\nInitialization of specific_h and genearal_h")
+    print("\nSpecific Boundary: ", specific_h)
+    general_h = [["?" for i in range(len(specific_h))] for i in range(len(specific_h))]
+    print("\nGeneric Boundary: ",general_h)  
+
+    for i, h in enumerate(concepts):
+        print("\nInstance", i+1 , "is ", h)
+        if target[i] == "yes":
+            print("Instance is Positive ")
+            for x in range(len(specific_h)): 
+                if h[x]!= specific_h[x]:                    
+                    specific_h[x] ='?'                     
+                    general_h[x][x] ='?'
+                   
+        if target[i] == "no":            
+            print("Instance is Negative ")
+            for x in range(len(specific_h)): 
+                if h[x]!= specific_h[x]:                    
+                    general_h[x][x] = specific_h[x]                
+                else:                    
+                    general_h[x][x] = '?'        
+        
+        print("Specific Bundary after ", i+1, "Instance is ", specific_h)         
+        print("Generic Boundary after ", i+1, "Instance is ", general_h)
+        print("\n")
+
+    indices = [i for i, val in enumerate(general_h) if val == ['?', '?', '?', '?', '?', '?']]    
+    for i in indices:   
+        general_h.remove(['?', '?', '?', '?', '?', '?']) 
+    return specific_h, general_h 
+
+s_final, g_final = learn(concepts, target)
+
+print("Final Specific_h: ", s_final, sep="\n")
+print("Final General_h: ", g_final, sep="\n")
     
 
 </code>
@@ -415,12 +581,112 @@ aStarAlgo('A', 'J')
         <div class="text_area" id="program4">
             <pre>
                 <code class="language-java">
-                    public class PrintName {
+                   import pandas as pd
+import math
+import numpy as np
 
-                        public static void main(String[] args) {
-                            System.out.println("My name is Azlan");
-                        }
-                    }
+data = pd.read_csv("dataset.csv")
+features = [feat for feat in data]
+features.remove("answer")
+
+
+class Node:
+    def __init__(self):
+        self.children = []
+        self.value = ""
+        self.isLeaf = False
+        self.pred = ""
+        
+def entropy(examples):
+    pos = 0.0
+    neg = 0.0
+    for _, row in examples.iterrows():
+        if row["answer"] == "yes":
+            pos += 1
+        else:
+            neg += 1
+    if pos == 0.0 or neg == 0.0:
+        return 0.0
+    else:
+        p = pos / (pos + neg)
+        n = neg / (pos + neg)
+        return -(p * math.log(p, 2) + n * math.log(n, 2))
+
+def info_gain(examples, attr):
+    uniq = np.unique(examples[attr])
+    #print ("\n",uniq)
+    gain = entropy(examples)
+    #print ("\n",gain)
+    for u in uniq:
+        subdata = examples[examples[attr] == u]
+        #print ("\n",subdata)
+        sub_e = entropy(subdata)
+        gain -= (float(len(subdata)) / float(len(examples))) * sub_e
+        #print ("\n",gain)
+    return gain
+
+def ID3(examples, attrs):
+    root = Node()
+
+    max_gain = 0
+    max_feat = ""
+    for feature in attrs:
+        #print ("\n",examples)
+        gain = info_gain(examples, feature)
+        if gain > max_gain:
+            max_gain = gain
+            max_feat = feature
+    root.value = max_feat
+    #print ("\nMax feature attr",max_feat)
+    uniq = np.unique(examples[max_feat])
+    #print ("\n",uniq)
+    for u in uniq:
+        #print ("\n",u)
+        subdata = examples[examples[max_feat] == u]
+        #print ("\n",subdata)
+        if entropy(subdata) == 0.0:
+            newNode = Node()
+            newNode.isLeaf = True
+            newNode.value = u
+            newNode.pred = np.unique(subdata["answer"])
+            root.children.append(newNode)
+        else:
+            dummyNode = Node()
+            dummyNode.value = u
+            new_attrs = attrs.copy()
+            new_attrs.remove(max_feat)
+            child = ID3(subdata, new_attrs)
+            dummyNode.children.append(child)
+            root.children.append(dummyNode)
+
+    return root
+
+def printTree(root: Node, depth=0):
+    for i in range(depth):
+        print("\t", end="")
+    print(root.value, end="")
+    if root.isLeaf:
+        print(" -> ", root.pred)
+    print()
+    for child in root.children:
+        printTree(child, depth + 1)
+
+def classify(root: Node, new):
+    for child in root.children:
+        if child.value == new[root.value]:
+            if child.isLeaf:
+                print ("Predicted Label for new example", new," is:", child.pred)
+                exit
+            else:
+                classify (child.children[0], new)
+
+root = ID3(data, features)
+print("Decision Tree is:")
+printTree(root)
+print ("------------------")
+
+new = {"outlook":"sunny", "temperature":"hot", "humidity":"normal", "wind":"strong"}
+classify (root, new)
                     
 </code>
 </pre>
@@ -471,12 +737,66 @@ aStarAlgo('A', 'J')
         <div class="text_area" id="program5">
             <pre>
                 <code class="language-java ">
-                    public class PrintName {
+                 import numpy as np
 
-                        public static void main(String[] args) {
-                            System.out.println("My name is Azlan");
-                        }
-                    }
+X = np.array(([2, 9], [1, 5], [3, 6]), dtype=float)
+y = np.array(([92], [86], [89]), dtype=float)
+X = X/np.amax(X,axis=0) #maximum of X array longitudinally
+y = y/100
+
+#Sigmoid Function
+def sigmoid (x):
+    return 1/(1 + np.exp(-x))
+
+#Derivative of Sigmoid Function
+def derivatives_sigmoid(x):
+    return x * (1 - x)
+
+#Variable initialization
+epoch=5 #Setting training iterations
+lr=0.1 #Setting learning rate
+
+inputlayer_neurons = 2 #number of features in data set
+hiddenlayer_neurons = 3 #number of hidden layers neurons
+output_neurons = 1 #number of neurons at output layer
+#weight and bias initialization
+
+wh=np.random.uniform(size=(inputlayer_neurons,hiddenlayer_neurons))
+bh=np.random.uniform(size=(1,hiddenlayer_neurons))
+wout=np.random.uniform(size=(hiddenlayer_neurons,output_neurons))
+bout=np.random.uniform(size=(1,output_neurons))
+
+#draws a random range of numbers uniformly of dim x*y
+for i in range(epoch):
+    #Forward Propogation
+    hinp1=np.dot(X,wh)
+    hinp=hinp1 + bh
+    hlayer_act = sigmoid(hinp)
+    outinp1=np.dot(hlayer_act,wout)
+    outinp= outinp1+bout
+    output = sigmoid(outinp)
+    
+    #Backpropagation
+    EO = y-output
+    outgrad = derivatives_sigmoid(output)
+    d_output = EO * outgrad
+    EH = d_output.dot(wout.T)
+    hiddengrad = derivatives_sigmoid(hlayer_act)#how much hidden layer wts contributed to error
+    d_hiddenlayer = EH * hiddengrad
+    
+    wout += hlayer_act.T.dot(d_output) *lr   # dotproduct of nextlayererror and currentlayerop
+    wh += X.T.dot(d_hiddenlayer) *lr
+    
+    print ("-----------Epoch-", i+1, "Starts----------")
+    print("Input: \n" + str(X)) 
+    print("Actual Output: \n" + str(y))
+    print("Predicted Output: \n" ,output)
+    print ("-----------Epoch-", i+1, "Ends----------\n")
+        
+print("Input: \n" + str(X)) 
+print("Actual Output: \n" + str(y))
+print("Predicted Output: \n" ,output)
+
                     
 </code>
 </pre>
@@ -527,12 +847,117 @@ aStarAlgo('A', 'J')
         <div class="text_area" id="program6">
             <pre>
                 <code class="language-java">
-                    public class PrintName {
-
-                        public static void main(String[] args) {
-                            System.out.println("My name is Azlan");
-                        }
-                    }
+                    import csv
+import random
+import math
+ 
+def loadcsv(filename):
+	lines = csv.reader(open(filename, "r"));
+	dataset = list(lines)
+	for i in range(len(dataset)):
+       #converting strings into numbers for processing
+		dataset[i] = [float(x) for x in dataset[i]]
+        
+	return dataset
+ 
+def splitdataset(dataset, splitratio):
+    #67% training size
+	trainsize = int(len(dataset) * splitratio);
+	trainset = []
+	copy = list(dataset);    
+	while len(trainset) < trainsize:
+#generate indices for the dataset list randomly to pick ele for training data
+		index = random.randrange(len(copy));       
+		trainset.append(copy.pop(index))    
+	return [trainset, copy]
+ 
+def separatebyclass(dataset):
+	separated = {} #dictionary of classes 1 and 0 
+#creates a dictionary of classes 1 and 0 where the values are 
+#the instances belonging to each class
+	for i in range(len(dataset)):
+		vector = dataset[i]
+		if (vector[-1] not in separated):
+			separated[vector[-1]] = []
+		separated[vector[-1]].append(vector)
+	return separated
+ 
+def mean(numbers):
+	return sum(numbers)/float(len(numbers))
+ 
+def stdev(numbers):
+	avg = mean(numbers)
+	variance = sum([pow(x-avg,2) for x in numbers])/float(len(numbers)-1)
+	return math.sqrt(variance)
+ 
+def summarize(dataset): #creates a dictionary of classes
+	summaries = [(mean(attribute), stdev(attribute)) for attribute in zip(*dataset)];
+	del summaries[-1] #excluding labels +ve or -ve
+	return summaries
+ 
+def summarizebyclass(dataset):
+	separated = separatebyclass(dataset); 
+    #print(separated)
+	summaries = {}
+	for classvalue, instances in separated.items(): 
+#for key,value in dic.items()
+#summaries is a dic of tuples(mean,std) for each class value        
+		summaries[classvalue] = summarize(instances) #summarize is used to cal to mean and std
+	return summaries
+ 
+def calculateprobability(x, mean, stdev):
+	exponent = math.exp(-(math.pow(x-mean,2)/(2*math.pow(stdev,2))))
+	return (1 / (math.sqrt(2*math.pi) * stdev)) * exponent
+ 
+def calculateclassprobabilities(summaries, inputvector):
+	probabilities = {} # probabilities contains the all prob of all class of test data
+	for classvalue, classsummaries in summaries.items():#class and attribute information as mean and sd
+		probabilities[classvalue] = 1
+		for i in range(len(classsummaries)):
+			mean, stdev = classsummaries[i] #take mean and sd of every attribute for class 0 and 1 seperaely
+			x = inputvector[i] #testvector's first attribute
+			probabilities[classvalue] *= calculateprobability(x, mean, stdev);#use normal dist
+	return probabilities
+			
+def predict(summaries, inputvector): #training and test data is passed
+	probabilities = calculateclassprobabilities(summaries, inputvector)
+	bestLabel, bestProb = None, -1
+	for classvalue, probability in probabilities.items():#assigns that class which has he highest prob
+		if bestLabel is None or probability > bestProb:
+			bestProb = probability
+			bestLabel = classvalue
+	return bestLabel
+ 
+def getpredictions(summaries, testset):
+	predictions = []
+	for i in range(len(testset)):
+		result = predict(summaries, testset[i])
+		predictions.append(result)
+	return predictions
+ 
+def getaccuracy(testset, predictions):
+	correct = 0
+	for i in range(len(testset)):
+		if testset[i][-1] == predictions[i]:
+			correct += 1
+	return (correct/float(len(testset))) * 100.0
+ 
+def main():
+	filename = 'naivedata.csv'
+	splitratio = 0.67
+	dataset = loadcsv(filename);
+     
+	trainingset, testset = splitdataset(dataset, splitratio)
+	print('Split {0} rows into train={1} and test={2} rows'.format(len(dataset), len(trainingset), len(testset)))
+	# prepare model
+	summaries = summarizebyclass(trainingset);    
+	#print(summaries)
+    # test model
+	predictions = getpredictions(summaries, testset) #find the predictions of test data with the training data
+	accuracy = getaccuracy(testset, predictions)
+	print('Accuracy of the classifier is : {0}%'.format(accuracy))
+ 
+main()
                     
 </code>
 </pre>
@@ -585,12 +1010,50 @@ aStarAlgo('A', 'J')
         <div class="text_area" id="program7">
             <pre>
                 <code class="language-java">
-                    public class PrintName {
+                   from sklearn.cluster import KMeans
+from sklearn.mixture import GaussianMixture
+import sklearn.metrics as metrics
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 
-                        public static void main(String[] args) {
-                            System.out.println("My name is Azlan");
-                        }
-                    }
+names = ['Sepal_Length','Sepal_Width','Petal_Length','Petal_Width', 'Class']
+
+dataset = pd.read_csv("8-dataset.csv", names=names)
+
+X = dataset.iloc[:, :-1]  
+
+label = {'Iris-setosa': 0,'Iris-versicolor': 1, 'Iris-virginica': 2} 
+
+y = [label[c] for c in dataset.iloc[:, -1]]
+
+plt.figure(figsize=(14,7))
+colormap=np.array(['red','lime','black'])
+
+# REAL PLOT
+plt.subplot(1,3,1)
+plt.title('Real')
+plt.scatter(X.Petal_Length,X.Petal_Width,c=colormap[y])
+
+# K-PLOT
+model=KMeans(n_clusters=3, random_state=0).fit(X)
+plt.subplot(1,3,2)
+plt.title('KMeans')
+plt.scatter(X.Petal_Length,X.Petal_Width,c=colormap[model.labels_])
+
+print('The accuracy score of K-Mean: ',metrics.accuracy_score(y, model.labels_))
+print('The Confusion matrixof K-Mean:\n',metrics.confusion_matrix(y, model.labels_))
+
+# GMM PLOT
+gmm=GaussianMixture(n_components=3, random_state=0).fit(X)
+y_cluster_gmm=gmm.predict(X)
+plt.subplot(1,3,3)
+plt.title('GMM Classification')
+plt.scatter(X.Petal_Length,X.Petal_Width,c=colormap[y_cluster_gmm])
+
+print('The accuracy score of EM: ',metrics.accuracy_score(y, y_cluster_gmm))
+print('The Confusion matrix of EM:\n ',metrics.confusion_matrix(y, y_cluster_gmm))
+
                     
 </code>
 </pre>
