@@ -371,6 +371,18 @@ body {
 .explorer_dots{
     display: none;
 }
+.bottom_footer{
+    justify-content: space-around;
+}
+
+
+.bottom_footer img{
+    display: none;
+
+}
+.footer_text{
+    margin-right: 50px;
+}
 .text_area{
     font-size: 12px;
 }

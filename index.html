@@ -1,138 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Copyrights @ https://github.com/azlanajju/lab  -->
-<!-- Author : Azlan  -->
+  <!-- Copyrights @ https://github.com/azlanajju/lab  -->
+  <!-- Author : Azlan  -->
 
-<head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/error/lab.ico" />
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/error/lab.ico">
-
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <!-- font awesom icons  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-a11y-dark.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-a11y-dark.min.css"
+    />
 
     <!-- google fonts -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Product+Sans:regular,bold,italic,thin,light,bolditalic,black,blackitalic,thinitalic,lightitalic,medium,mediumitalic" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Product+Sans:regular,bold,italic,thin,light,bolditalic,black,blackitalic,thinitalic,lightitalic,medium,mediumitalic"
+    />
 
     <title>Lab Programs</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="head_portion1">
-        <div class="menu_icon" onclick="openNav()">
-            <i class="fas fa-ellipsis-v"></i>
-
-        </div>
-        Program.java - DAA - Visual Studio Code
+      <div class="menu_icon" onclick="openNav()">
+        <i class="fas fa-ellipsis-v"></i>
+      </div>
+      Program.java - DAA - Visual Studio Code
     </div>
     <div class="head_portion2">
-        <a href="">Sem3</a>
-        <a href="https://4thsem-lab.netlify.app/">Sem4</a>
-        <a href="">Sem5</a>
-        <a href="">Sem6</a>
-        <a href=""  class="sem_active">Sem7</a>
-        <a href="">Sem8</a>
-
+      <a href="">Sem3</a>
+      <a href="https://4thsem-lab.netlify.app/">Sem4</a>
+      <a href="">Sem5</a>
+      <a href="">Sem6</a>
+      <a href="" class="sem_active">Sem7</a>
+      <a href="">Sem8</a>
     </div>
 
     <div class="side_icons">
-        <div class="side_icon_img active_icon">
-            <img src="./icons/copy.png" alt="">
-        </div>
-        <div class="side_icon_img">
-            <img src="./icons/search.png" alt="">
-        </div>
+      <div class="side_icon_img active_icon">
+        <img src="./icons/copy.png" alt="" />
+      </div>
+      <div class="side_icon_img">
+        <img src="./icons/search.png" alt="" />
+      </div>
 
-        <div class="side_icon_img">
-            <img src="./icons/gitcontrol.png" alt="">
-        </div>
-        <div class="side_icon_img">
-            <img src="./icons/debug.png" alt="">
-        </div>
-        <div class="side_icon_img">
-            <img src="./icons/extension.png" alt="">
-        </div>
+      <div class="side_icon_img">
+        <img src="./icons/gitcontrol.png" alt="" />
+      </div>
+      <div class="side_icon_img">
+        <img src="./icons/debug.png" alt="" />
+      </div>
+      <div class="side_icon_img">
+        <img src="./icons/extension.png" alt="" />
+      </div>
     </div>
 
     <div id="pgmList" class="pgm_number">
-        <div class="explorer">
-            <p>EXPLORER</p>
-            <p class="explorer_dots">...</p>
-        </div>
-        <div class="vs_code">
-            <i class='fas fa-chevron-down'></i> VS_CODE
+      <div class="explorer">
+        <p>EXPLORER</p>
+        <p class="explorer_dots">...</p>
+      </div>
+      <div class="vs_code"><i class="fas fa-chevron-down"></i> VS_CODE</div>
 
-
-        </div>
-
-        <div class="subject_name">
-            <div class="sub_heading">
-                <i class='fas fa-chevron-down'></i> AIML
-            </div>
-            <p onclick="switchProgram('program_container1')"> <img src="./icons/python.png" alt=""> program1.py</p>
-            <p onclick="switchProgram('program_container2')"> <img src="./icons/python.png" alt=""> program2.py</p>
-            <p onclick="switchProgram('program_container3')"> <img src="./icons/python.png" alt=""> program3.py</p>
-            <p onclick="switchProgram('program_container4')"> <img src="./icons/python.png" alt=""> program4.py</p>
-            <p onclick="switchProgram('program_container5')"> <img src="./icons/python.png" alt=""> program5.py</p>
-            <p onclick="switchProgram('program_container6')"> <img src="./icons/python.png" alt=""> program6.py</p>
-            <p onclick="switchProgram('program_container7')"> <img src="./icons/python.png" alt=""> program7.py</p>
-            <!-- <p onclick="switchProgram('program_container8')"> <img src="./icons/java.png" alt=""> program8.java</p>
-            <p onclick="switchProgram('program_container9')"> <img src="./icons/java.png" alt=""> program9.java</p>
-            <p onclick="switchProgram('program_container10')"> <img src="./icons/java.png" alt=""> program10.java</p> -->
-        </div>
-
-
+      <div class="subject_name">
+        <div class="sub_heading"><i class="fas fa-chevron-down"></i> AIML</div>
+        <p onclick="switchProgram('program_container1')">
+          <img src="./icons/python.png" alt="" /> program1.py
+        </p>
+        <p onclick="switchProgram('program_container2')">
+          <img src="./icons/python.png" alt="" /> program2.py
+        </p>
+        <p onclick="switchProgram('program_container3')">
+          <img src="./icons/python.png" alt="" /> program3.py
+        </p>
+        <p onclick="switchProgram('program_container4')">
+          <img src="./icons/python.png" alt="" /> program4.py
+        </p>
+        <p onclick="switchProgram('program_container5')">
+          <img src="./icons/python.png" alt="" /> program5.py
+        </p>
+        <p onclick="switchProgram('program_container6')">
+          <img src="./icons/python.png" alt="" /> program6.py
+        </p>
+        <p onclick="switchProgram('program_container7')">
+          <img src="./icons/python.png" alt="" /> program7.py
+        </p>
+        <p onclick="switchProgram('program_container8')">
+          <img src="./icons/python.png" alt="" /> program8.py
+        </p>
+        <p onclick="switchProgram('program_container9')">
+          <img src="./icons/python.png" alt="" /> program9.py
+        </p>
+      </div>
     </div>
-
 
     <!-- program section  -->
     <!-- program 1  -->
     <div id="program_container1" class="textarea_container">
-
-        <div class="line_numbers">
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>5</p>
-            <p>6</p>
-            <p>7</p>
-            <p>8</p>
-            <p>9</p>
-            <p>10</p>
-            <p>11</p>
-            <p>12</p>
-            <p>13</p>
-            <p>14</p>
-            <p>15</p>
-            <p>16</p>
-            <p>17</p>
-            <p>18</p>
-            <p>19</p>
-            <p>20</p>
-            <p>21</p>
-            <p>22</p>
-
-        </div>
-        <div class="copy_btn">
-            <div class="pgm_num">
-                Program 1 <p onclick="closeProgram()">X</p>
-
-            </div>
-
-            <div class="copy_icon" onclick="copyProgram('program1', 'copied1')">
-                <i class="far fa-copy"></i>
-                <div class="copied" id="copied1"></div>
-            </div>
+      <div class="line_numbers">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+        <p>8</p>
+        <p>9</p>
+        <p>10</p>
+        <p>11</p>
+        <p>12</p>
+        <p>13</p>
+        <p>14</p>
+        <p>15</p>
+        <p>16</p>
+        <p>17</p>
+        <p>18</p>
+        <p>19</p>
+        <p>20</p>
+        <p>21</p>
+        <p>22</p>
+      </div>
+      <div class="copy_btn">
+        <div class="pgm_num">
+          Program 1
+          <p onclick="closeProgram()">X</p>
         </div>
 
+        <div class="copy_icon" onclick="copyProgram('program1', 'copied1')">
+          <i class="far fa-copy"></i>
+          <div class="copied" id="copied1"></div>
+        </div>
+      </div>
 
-        <div class="text_area" id="program1">
-            <pre>
+      <div class="text_area" id="program1">
+        <pre>
     <code  class="language-java">
     
 def aStarAlgo(start_node, stop_node):
@@ -238,52 +248,52 @@ aStarAlgo('A', 'J')
 
     </code>
     </pre>
-        </div>
-
+      </div>
     </div>
 
-
     <!-- program 2  -->
-    <div id="program_container2" class="textarea_container" style="display: none;">
-
-        <div class="line_numbers">
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>5</p>
-            <p>6</p>
-            <p>7</p>
-            <p>8</p>
-            <p>9</p>
-            <p>10</p>
-            <p>11</p>
-            <p>12</p>
-            <p>13</p>
-            <p>14</p>
-            <p>15</p>
-            <p>16</p>
-            <p>17</p>
-            <p>18</p>
-            <p>19</p>
-            <p>20</p>
-            <p>21</p>
-            <p>22</p>
-
+    <div
+      id="program_container2"
+      class="textarea_container"
+      style="display: none"
+    >
+      <div class="line_numbers">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+        <p>8</p>
+        <p>9</p>
+        <p>10</p>
+        <p>11</p>
+        <p>12</p>
+        <p>13</p>
+        <p>14</p>
+        <p>15</p>
+        <p>16</p>
+        <p>17</p>
+        <p>18</p>
+        <p>19</p>
+        <p>20</p>
+        <p>21</p>
+        <p>22</p>
+      </div>
+      <div class="copy_btn">
+        <div class="pgm_num">
+          Program 2
+          <p onclick="closeProgram()">X</p>
         </div>
-        <div class="copy_btn">
-            <div class="pgm_num">
-                Program 2 <p onclick="closeProgram()">X</p>
 
-            </div>
-
-            <div class="copy_icon" onclick="copyProgram('program2', 'copied2')">
-                <i class="far fa-copy"></i>
-                <div class="copied" id="copied2"></div>
-            </div>
+        <div class="copy_icon" onclick="copyProgram('program2', 'copied2')">
+          <i class="far fa-copy"></i>
+          <div class="copied" id="copied2"></div>
         </div>
-        <div class="text_area" id="program2">
-            <pre>
+      </div>
+      <div class="text_area" id="program2">
+        <pre>
 <code class="language-java">
     class Graph:
     def __init__(self, graph, heuristicNodeList, startNode): #instantiate graph object with graph topology, heuristic values, start node
@@ -381,52 +391,53 @@ G1.printSolution()
     
     </code>
     </pre>
-        </div>
-
+      </div>
     </div>
 
     <!-- program 3  -->
 
-    <div id="program_container3" class="textarea_container" style="display: none;">
-
-        <div class="line_numbers">
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>5</p>
-            <p>6</p>
-            <p>7</p>
-            <p>8</p>
-            <p>9</p>
-            <p>10</p>
-            <p>11</p>
-            <p>12</p>
-            <p>13</p>
-            <p>14</p>
-            <p>15</p>
-            <p>16</p>
-            <p>17</p>
-            <p>18</p>
-            <p>19</p>
-            <p>20</p>
-            <p>21</p>
-            <p>22</p>
-
+    <div
+      id="program_container3"
+      class="textarea_container"
+      style="display: none"
+    >
+      <div class="line_numbers">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+        <p>8</p>
+        <p>9</p>
+        <p>10</p>
+        <p>11</p>
+        <p>12</p>
+        <p>13</p>
+        <p>14</p>
+        <p>15</p>
+        <p>16</p>
+        <p>17</p>
+        <p>18</p>
+        <p>19</p>
+        <p>20</p>
+        <p>21</p>
+        <p>22</p>
+      </div>
+      <div class="copy_btn">
+        <div class="pgm_num">
+          Program 3
+          <p onclick="closeProgram()">X</p>
         </div>
-        <div class="copy_btn">
-            <div class="pgm_num">
-                Program 3 <p onclick="closeProgram()">X</p>
 
-            </div>
-
-            <div class="copy_icon" onclick="copyProgram('program3', 'copied3')">
-                <i class="far fa-copy"></i>
-                <div class="copied" id="copied3"></div>
-            </div>
+        <div class="copy_icon" onclick="copyProgram('program3', 'copied3')">
+          <i class="far fa-copy"></i>
+          <div class="copied" id="copied3"></div>
         </div>
-        <div class="text_area" id="program3">
-            <pre>
+      </div>
+      <div class="text_area" id="program3">
+        <pre>
 <code class="language-java" >
 import numpy as np 
 import pandas as pd
@@ -517,52 +528,53 @@ print("Final General_h: ", g_final, sep="\n")
 
 </code>
 </pre>
-        </div>
-
+      </div>
     </div>
 
     <!-- program 4  -->
 
-    <div id="program_container4" class="textarea_container" style="display: none;">
-
-        <div class="line_numbers">
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>5</p>
-            <p>6</p>
-            <p>7</p>
-            <p>8</p>
-            <p>9</p>
-            <p>10</p>
-            <p>11</p>
-            <p>12</p>
-            <p>13</p>
-            <p>14</p>
-            <p>15</p>
-            <p>16</p>
-            <p>17</p>
-            <p>18</p>
-            <p>19</p>
-            <p>20</p>
-            <p>21</p>
-            <p>22</p>
-
+    <div
+      id="program_container4"
+      class="textarea_container"
+      style="display: none"
+    >
+      <div class="line_numbers">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+        <p>8</p>
+        <p>9</p>
+        <p>10</p>
+        <p>11</p>
+        <p>12</p>
+        <p>13</p>
+        <p>14</p>
+        <p>15</p>
+        <p>16</p>
+        <p>17</p>
+        <p>18</p>
+        <p>19</p>
+        <p>20</p>
+        <p>21</p>
+        <p>22</p>
+      </div>
+      <div class="copy_btn">
+        <div class="pgm_num">
+          Program 4
+          <p onclick="closeProgram()">X</p>
         </div>
-        <div class="copy_btn">
-            <div class="pgm_num">
-                Program 4 <p onclick="closeProgram()">X</p>
 
-            </div>
-
-            <div class="copy_icon" onclick="copyProgram('program4', 'copied4')">
-                <i class="far fa-copy"></i>
-                <div class="copied" id="copied4"></div>
-            </div>
+        <div class="copy_icon" onclick="copyProgram('program4', 'copied4')">
+          <i class="far fa-copy"></i>
+          <div class="copied" id="copied4"></div>
         </div>
-        <div class="text_area" id="program4">
-            <pre>
+      </div>
+      <div class="text_area" id="program4">
+        <pre>
                 <code class="language-java">
 import pandas as pd
 import math
@@ -673,52 +685,53 @@ classify (root, new)
                     
 </code>
 </pre>
-        </div>
-
+      </div>
     </div>
 
     <!-- program 5  -->
 
-    <div id="program_container5" class="textarea_container" style="display: none;">
-
-        <div class="line_numbers">
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>5</p>
-            <p>6</p>
-            <p>7</p>
-            <p>8</p>
-            <p>9</p>
-            <p>10</p>
-            <p>11</p>
-            <p>12</p>
-            <p>13</p>
-            <p>14</p>
-            <p>15</p>
-            <p>16</p>
-            <p>17</p>
-            <p>18</p>
-            <p>19</p>
-            <p>20</p>
-            <p>21</p>
-            <p>22</p>
-
+    <div
+      id="program_container5"
+      class="textarea_container"
+      style="display: none"
+    >
+      <div class="line_numbers">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+        <p>8</p>
+        <p>9</p>
+        <p>10</p>
+        <p>11</p>
+        <p>12</p>
+        <p>13</p>
+        <p>14</p>
+        <p>15</p>
+        <p>16</p>
+        <p>17</p>
+        <p>18</p>
+        <p>19</p>
+        <p>20</p>
+        <p>21</p>
+        <p>22</p>
+      </div>
+      <div class="copy_btn">
+        <div class="pgm_num">
+          Program 5
+          <p onclick="closeProgram()">X</p>
         </div>
-        <div class="copy_btn">
-            <div class="pgm_num">
-                Program 5 <p onclick="closeProgram()">X</p>
 
-            </div>
-
-            <div class="copy_icon" onclick="copyProgram('program5', 'copied5')">
-                <i class="far fa-copy"></i>
-                <div class="copied" id="copied5"></div>
-            </div>
+        <div class="copy_icon" onclick="copyProgram('program5', 'copied5')">
+          <i class="far fa-copy"></i>
+          <div class="copied" id="copied5"></div>
         </div>
-        <div class="text_area" id="program5">
-            <pre>
+      </div>
+      <div class="text_area" id="program5">
+        <pre>
                 <code class="language-java ">
 import numpy as np
 
@@ -783,52 +796,53 @@ print("Predicted Output: \n" ,output)
                     
 </code>
 </pre>
-        </div>
-
+      </div>
     </div>
 
     <!-- program 6  -->
 
-    <div id="program_container6" class="textarea_container" style="display: none;">
-
-        <div class="line_numbers">
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>5</p>
-            <p>6</p>
-            <p>7</p>
-            <p>8</p>
-            <p>9</p>
-            <p>10</p>
-            <p>11</p>
-            <p>12</p>
-            <p>13</p>
-            <p>14</p>
-            <p>15</p>
-            <p>16</p>
-            <p>17</p>
-            <p>18</p>
-            <p>19</p>
-            <p>20</p>
-            <p>21</p>
-            <p>22</p>
-
+    <div
+      id="program_container6"
+      class="textarea_container"
+      style="display: none"
+    >
+      <div class="line_numbers">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+        <p>8</p>
+        <p>9</p>
+        <p>10</p>
+        <p>11</p>
+        <p>12</p>
+        <p>13</p>
+        <p>14</p>
+        <p>15</p>
+        <p>16</p>
+        <p>17</p>
+        <p>18</p>
+        <p>19</p>
+        <p>20</p>
+        <p>21</p>
+        <p>22</p>
+      </div>
+      <div class="copy_btn">
+        <div class="pgm_num">
+          Program 6
+          <p onclick="closeProgram()">X</p>
         </div>
-        <div class="copy_btn">
-            <div class="pgm_num">
-                Program 6 <p onclick="closeProgram()">X</p>
 
-            </div>
-
-            <div class="copy_icon" onclick="copyProgram('program6', 'copied6')">
-                <i class="far fa-copy"></i>
-                <div class="copied" id="copied6"></div>
-            </div>
+        <div class="copy_icon" onclick="copyProgram('program6', 'copied6')">
+          <i class="far fa-copy"></i>
+          <div class="copied" id="copied6"></div>
         </div>
-        <div class="text_area" id="program6">
-            <pre>
+      </div>
+      <div class="text_area" id="program6">
+        <pre>
                 <code class="language-java">
 import csv
 import random
@@ -944,54 +958,53 @@ main()
                     
 </code>
 </pre>
-        </div>
-
-
-
+      </div>
     </div>
 
     <!-- program 7  -->
 
-    <div id="program_container7" class="textarea_container" style="display: none;">
-
-        <div class="line_numbers">
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>5</p>
-            <p>6</p>
-            <p>7</p>
-            <p>8</p>
-            <p>9</p>
-            <p>10</p>
-            <p>11</p>
-            <p>12</p>
-            <p>13</p>
-            <p>14</p>
-            <p>15</p>
-            <p>16</p>
-            <p>17</p>
-            <p>18</p>
-            <p>19</p>
-            <p>20</p>
-            <p>21</p>
-            <p>22</p>
-
+    <div
+      id="program_container7"
+      class="textarea_container"
+      style="display: none"
+    >
+      <div class="line_numbers">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+        <p>8</p>
+        <p>9</p>
+        <p>10</p>
+        <p>11</p>
+        <p>12</p>
+        <p>13</p>
+        <p>14</p>
+        <p>15</p>
+        <p>16</p>
+        <p>17</p>
+        <p>18</p>
+        <p>19</p>
+        <p>20</p>
+        <p>21</p>
+        <p>22</p>
+      </div>
+      <div class="copy_btn">
+        <div class="pgm_num">
+          Program 7
+          <p onclick="closeProgram()">X</p>
         </div>
-        <div class="copy_btn">
-            <div class="pgm_num">
-                Program 7 <p onclick="closeProgram()">X</p>
 
-            </div>
-
-            <div class="copy_icon" onclick="copyProgram('program7', 'copied7')">
-                <i class="far fa-copy"></i>
-                <div class="copied" id="copied7"></div>
-            </div>
+        <div class="copy_icon" onclick="copyProgram('program7', 'copied7')">
+          <i class="far fa-copy"></i>
+          <div class="copied" id="copied7"></div>
         </div>
-        <div class="text_area" id="program7">
-            <pre>
+      </div>
+      <div class="text_area" id="program7">
+        <pre>
                 <code class="language-java">
 from sklearn.cluster import KMeans
 from sklearn.mixture import GaussianMixture
@@ -1040,76 +1053,210 @@ print('The Confusion matrix of EM:\n ',metrics.confusion_matrix(y, y_cluster_gmm
                     
 </code>
 </pre>
+      </div>
+    </div>
+
+    <!-- program 8  -->
+
+    <div
+      id="program_container8"
+      class="textarea_container"
+      style="display: none"
+    >
+      <div class="line_numbers">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+        <p>8</p>
+        <p>9</p>
+        <p>10</p>
+        <p>11</p>
+        <p>12</p>
+        <p>13</p>
+        <p>14</p>
+        <p>15</p>
+        <p>16</p>
+        <p>17</p>
+        <p>18</p>
+        <p>19</p>
+        <p>20</p>
+        <p>21</p>
+        <p>22</p>
+      </div>
+
+      <div class="copy_btn">
+        <div class="pgm_num">
+          Program 8
+          <p onclick="closeProgram()">X</p>
         </div>
-<div class="copy_btn">
-            <div class="pgm_num">
-                Program 8 <p onclick="closeProgram()">X</p>
 
-            </div>
-
-            <div class="copy_icon" onclick="copyProgram('program8', 'copied8')">
-                <i class="far fa-copy"></i>
-                <div class="copied" id="copied7"></div>
-            </div>
+        <div class="copy_icon" onclick="copyProgram('program8', 'copied8')">
+          <i class="far fa-copy"></i>
+          <div class="copied" id="copied8"></div>
         </div>
-        <div class="text_area" id="program8">
-            <pre>
-                <code class="language-java">
-import numpy as np 
-import pandas as pd
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.model_selection import train_test_split  
-from sklearn import metrics
-
-names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'Class']
-
-# Read dataset to pandas dataframe
-dataset = pd.read_csv("8-dataset.csv", names=names)
-X = dataset.iloc[:, :-1]  
-y = dataset.iloc[:, -1]
-print(X.head())
-Xtrain, Xtest, ytrain, ytest = train_test_split(X, y, test_size=0.10) 
-
-classifier = KNeighborsClassifier(n_neighbors=5).fit(Xtrain, ytrain) 
-
-ypred = classifier.predict(Xtest)
-
-i = 0
-print ("\n-------------------------------------------------------------------------")
-print ('%-25s %-25s %-25s' % ('Original Label', 'Predicted Label', 'Correct/Wrong'))
-print ("-------------------------------------------------------------------------")
-for label in ytest:
-    print ('%-25s %-25s' % (label, ypred[i]), end="")
-    if (label == ypred[i]):
-        print (' %-25s' % ('Correct'))
-    else:
-        print (' %-25s' % ('Wrong'))
-    i = i + 1
-print ("-------------------------------------------------------------------------")
-print("\nConfusion Matrix:\n",metrics.confusion_matrix(ytest, ypred))  
-print ("-------------------------------------------------------------------------")
-print("\nClassification Report:\n",metrics.classification_report(ytest, ypred)) 
-print ("-------------------------------------------------------------------------")
-print('Accuracy of the classifer is %0.2f' % metrics.accuracy_score(ytest,ypred))
-print ("-------------------------------------------------------------------------")
+      </div>
+      <div class="text_area" id="program8">
+        <pre>
+            <code class="language-java">
+                import numpy as np 
+                import pandas as pd
+                from sklearn.neighbors import KNeighborsClassifier
+                from sklearn.model_selection import train_test_split  
+                from sklearn import metrics
+                
+                names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'Class']
+                
+                # Read dataset to pandas dataframe
+                dataset = pd.read_csv("8-dataset.csv", names=names)
+                X = dataset.iloc[:, :-1]  
+                y = dataset.iloc[:, -1]
+                print(X.head())
+                Xtrain, Xtest, ytrain, ytest = train_test_split(X, y, test_size=0.10) 
+                
+                classifier = KNeighborsClassifier(n_neighbors=5).fit(Xtrain, ytrain) 
+                
+                ypred = classifier.predict(Xtest)
+                
+                i = 0
+                print ("\n-------------------------------------------------------------------------")
+                print ('%-25s %-25s %-25s' % ('Original Label', 'Predicted Label', 'Correct/Wrong'))
+                print ("-------------------------------------------------------------------------")
+                for label in ytest:
+                    print ('%-25s %-25s' % (label, ypred[i]), end="")
+                    if (label == ypred[i]):
+                        print (' %-25s' % ('Correct'))
+                    else:
+                        print (' %-25s' % ('Wrong'))
+                    i = i + 1
+                print ("-------------------------------------------------------------------------")
+                print("\nConfusion Matrix:\n",metrics.confusion_matrix(ytest, ypred))  
+                print ("-------------------------------------------------------------------------")
+                print("\nClassification Report:\n",metrics.classification_report(ytest, ypred)) 
+                print ("-------------------------------------------------------------------------")
+                print('Accuracy of the classifer is %0.2f' % metrics.accuracy_score(ytest,ypred))
+                print ("-------------------------------------------------------------------------")
 </code>
 </pre>
-        </div>
+      </div>
     </div>
 
 
-    
-    <div class="bottom_footer">
-        <img src="./icons/leftBottom.png" alt="">
+    <!-- program 9  -->
 
-        <div>Az<a class="footer_credits" href="https://github.com/azlanajju">lan</a> | &copy; 2023
-            <!-- | <small>in collab with </small><a class="footer_credits" href="https://github.com/ms-poojary">Varshini</a>&nbsp; -->
-           </div>
+    <div
+      id="program_container9"
+      class="textarea_container"
+      style="display: none"
+    >
+      <div class="line_numbers">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+        <p>8</p>
+        <p>9</p>
+        <p>10</p>
+        <p>11</p>
+        <p>12</p>
+        <p>13</p>
+        <p>14</p>
+        <p>15</p>
+        <p>16</p>
+        <p>17</p>
+        <p>18</p>
+        <p>19</p>
+        <p>20</p>
+        <p>21</p>
+        <p>22</p>
+      </div>
+
+      <div class="copy_btn">
+        <div class="pgm_num">
+          Program 9
+          <p onclick="closeProgram()">X</p>
+        </div>
+
+        <div class="copy_icon" onclick="copyProgram('program9', 'copied9')">
+          <i class="far fa-copy"></i>
+          <div class="copied" id="copied9"></div>
+        </div>
+      </div>
+      <div class="text_area" id="program9">
+        <pre>
+            <code class="language-java">
+
+                import matplotlib.pyplot as plt
+                import pandas as pd
+                import numpy as np
+                
+                def kernel(point, xmat, k):
+                    m,n = np.shape(xmat)
+                    weights = np.mat(np1.eye((m)))
+                    for j in range(m):
+                        diff = point - X[j]
+                        weights[j,j] = np.exp(diff*diff.T/(-2.0*k**2))
+                    return weights
+                
+                def localWeight(point, xmat, ymat, k):
+                    wei = kernel(point,xmat,k)
+                    W = (X.T*(wei*X)).I*(X.T*(wei*ymat.T))
+                    return W
+                     
+                def localWeightRegression(xmat, ymat, k):
+                    m,n = np.shape(xmat)
+                    ypred = np.zeros(m)
+                    for i in range(m):
+                        ypred[i] = xmat[i]*localWeight(xmat[i],xmat,ymat,k)
+                    return ypred
+                       
+                # load data points
+                data = pd.read_csv('10-dataset.csv')
+                bill = np.array(data.total_bill)
+                tip = np.array(data.tip)
+                 
+                #preparing and add 1 in bill
+                mbill = np.mat(bill)
+                mtip = np.mat(tip)
+                
+                m= np.shape(mbill)[1]
+                one = np.mat(np1.ones(m))
+                X = np.hstack((one.T,mbill.T))
+                
+                #set k here
+                ypred = localWeightRegression(X,mtip,0.5)
+                SortIndex = X[:,1].argsort(0)
+                xsort = X[SortIndex][:,0]
+                
+                fig = plt.figure()
+                ax = fig.add_subplot(1,1,1)
+                ax.scatter(bill,tip, color='green')
+                ax.plot(xsort[:,1],ypred[SortIndex], color = 'red', linewidth=5)
+                plt.xlabel('Total bill')
+                plt.ylabel('Tip')
+                plt.show();
+</code>
+</pre>
+      </div>
+    </div>
+
+    <div class="bottom_footer">
+      <img src="./icons/leftBottom.png" alt="" />
+
+      <div>
+        Az<a class="footer_credits" href="https://github.com/azlanajju">lan</a>
+        | &copy; 2023
+        | <small>in collab with </small><a class="footer_credits" href="https://github.com/shabnazakthar">Shabnaz</a>&nbsp;
+      </div>
     </div>
     <script src="./main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-java.min.js"></script>
-
-</body>
-
+  </body>
 </html>
