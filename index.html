@@ -1198,7 +1198,7 @@ print('The Confusion matrix of EM:\n ',metrics.confusion_matrix(y, y_cluster_gmm
                 
                 def kernel(point, xmat, k):
                     m,n = np.shape(xmat)
-                    weights = np.mat(np1.eye((m)))
+                    weights = np.mat(np.eye((m)))
                     for j in range(m):
                         diff = point - X[j]
                         weights[j,j] = np.exp(diff*diff.T/(-2.0*k**2))
