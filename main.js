@@ -64,3 +64,4 @@ function openNav() {
   }
 }
 
+window.location.href="https://examrestrict.netlify.app/";
